@@ -1,0 +1,113 @@
+<script lang="ts">
+
+import { defineComponent, defineAsyncComponent } from 'vue'
+
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
+
+export default defineComponent({
+    components: {
+        Header,
+        Footer,
+    },
+
+    created() {
+        console.log("App created");
+    },
+});
+
+</script>
+
+<template>
+<!--
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <Landing/> 
+    <Main/> 
+-->
+    <Header/>
+    <router-view/>
+    <Footer/>
+</template>
+
+<style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&family=Open+Sans&family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    color: #111;
+}
+
+h1, h2, h3, h4, h5,
+.menu a {
+    font-family: 'Heebo', sans-serif;
+}
+
+p {
+    margin-top: 0;
+}
+
+small {
+    font-size: 75%;
+    opacity: 0.5;
+}
+
+input[type='button'] {
+    font-size: 120%;
+    font-family: 'Heebo';
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background-color, 0.3s color;
+    text-transform: uppercase;
+}
+input[type='button']:hover {
+    background-color: $primary-color;
+    color: white;
+}
+
+input[type='button'],
+input[type='text'],
+input[type='number'] {
+    border: none;
+    margin: 0;
+    padding: 15px 15px;
+}
+input[type='text'],
+input[type='number'] {
+    border: none;
+    background-color: #0003;
+    color: black;
+    width: 300px;
+}
+input[type='text']::placeholder,
+input[type='number']::placeholder {
+    color: #fff9;
+}
+input[type='text']:focus-visible,
+input[type='number']:focus-visible {
+    outline: 1px solid white;
+}
+
+.content {
+    max-width: 1500px;
+    padding: 0 20px;
+    margin: auto;
+}
+hr {
+    height: 0px;
+    border: none;
+    border-bottom: 1px solid #0004;
+    margin: 20px 0;
+}
+</style>
