@@ -6,12 +6,14 @@ export default defineComponent({
     components: {
     },
 
+    /*
     props: {
         value: {
             type: String as PropType<string>,
             //required: true,
         },
     },
+    */
 
     data() {
         return {
@@ -26,7 +28,8 @@ export default defineComponent({
     methods: {
         submit() {
             console.log("emit input", this.query)
-            this.$emit("update:locationID", this.query);
+            //this.$emit("update:locationID", this.query);
+            this.$emit("submit", "zip-us-99999");
         }
     }
 });
@@ -36,22 +39,9 @@ export default defineComponent({
 <template>
 <div class="profileselecter">
     <input type="text" v-model="query" placeholder="Enter Address, ZIP Code, City, or State" class="input"/>
-    <input type="button" @click="submit" value="Open"/>
 </div>
 </template>
 
 <style lang="scss" scoped>
-.profileselecter {
-    flex-grow: 2;
-    display: flex;
-}
-.input {
-    font-size: 13pt;
-    border: #ccc;
-    flex-grow: 1;
-    color: black;
-}
-input:focus-visible {
-    border: #999;
-}
+
 </style>

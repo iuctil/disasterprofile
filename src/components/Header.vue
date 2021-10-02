@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import { defineComponent, defineAsyncComponent } from 'vue'
+import { mapState, mapGetters, } from 'vuex'
 
 import Menu from '../components/Menu.vue'
 
@@ -13,11 +14,15 @@ export default defineComponent({
     mounted() {
     },
 
+    computed: {
+        ...mapState(['siteName']),
+    },
+
     methods: {
-      clicktitle() {
-        this.$router.push("/");
-      }
-    }
+        clicktitle() {
+            this.$router.push("/");
+        }
+    },
 
 });
 
@@ -28,7 +33,7 @@ export default defineComponent({
   <div class="content">
     <div class="title" @click="clicktitle">
       <img alt="logo" src="../assets/logo.png" class="logo"/>
-      <h4>MyDisasterProfile</h4>
+      <h1>{{siteName}}</h1>
     </div>
     <!--<ProfileSelecter v-if="$route.path != '/'" style="background-color: #0003;"/>-->
     <Menu style="margin-left: 20px; text-align: right;"/>
@@ -50,22 +55,23 @@ export default defineComponent({
   cursor: pointer;
 }
 
-h4 {
+h1 {
   display: inline-block;
   margin: 0;
   padding: 0px 10px;
   padding-right: 30px;
   letter-spacing: 0.25px;
-  color: #666;
-  font-size: 18pt;
+  font-size: 25pt;
+  color: $primary-color;
 }
 img.logo {
-  padding: 0px 0;
+  padding: 0 0;
   height: 50px;
-  vertical-align: middle;
+  vertical-align: top;
+  margin-right: 10px;
 }
 
 ::v-deep(.menu a) {
-  padding-right: 20px;
+  padding-right: 30px;
 }
 </style>

@@ -41,16 +41,19 @@ html, body {
     font-weight: 400;
     line-height: 1.6;
     font-size: 1rem;
-    color: #333;
+    color: $primary-text-color;
+    background-color: $primary-bgcolor;
+}
+a {
+    color: $primary-text-color;
 }
 
 h1, h2, h3, h4, h5 {
     margin-top: 0;
-    color: #111;
+    color: $primary-color-dark;
 }
 
-h1, h2, h3, h4, h5,
-.menu a {
+h1, h2, h3, h4, h5, .menu a {
     font-family: 'Heebo', sans-serif;
 }
 
@@ -64,7 +67,6 @@ small {
 }
 
 input[type='button'] {
-    font-size: 120%;
     font-family: 'Heebo';
     font-weight: bold;
     cursor: pointer;
@@ -81,7 +83,7 @@ input[type='text'],
 input[type='number'] {
     border: none;
     margin: 0;
-    padding: 15px 15px;
+    padding: 10px;
 }
 input[type='text'],
 input[type='number'] {
@@ -89,6 +91,7 @@ input[type='number'] {
     background-color: #0003;
     color: black;
     width: 300px;
+    font-size: 120%;
 }
 input[type='text']::placeholder,
 input[type='number']::placeholder {
@@ -96,11 +99,11 @@ input[type='number']::placeholder {
 }
 input[type='text']:focus-visible,
 input[type='number']:focus-visible {
-    outline: 1px solid white;
+    outline: none;
 }
 
 .content {
-    max-width: 1500px;
+    max-width: 1100px;
     padding: 0 20px;
     margin: auto;
 }

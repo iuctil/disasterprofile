@@ -1,0 +1,14 @@
+{
+    "location": [-86.576, 39.143],
+
+    "hazards": [
+       { "hazardId": "flood", "prob": 0.8 },
+       { "hazardId": "icestorm", "prob": 0.5 },
+       { "hazardId": "heart-disease", "prob": 0.3 },
+       { "hazardId": "sinkhole", "prob": 0.1 },
+       { "hazardId": "tornado", "prob": 0.5 },
+       { "hazardId": "windstorm", "prob": 0.1 },
+       { "hazardId": "snowstorm", "prob": 0.1 }
+    ]
+
+}

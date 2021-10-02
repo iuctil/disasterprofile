@@ -2,14 +2,20 @@
 
 import { defineComponent } from 'vue'
 
-import DemoForm from './components/DemoForm.vue'
-import Summary from './components/Summary.vue'
+//import DemoForm from './components/DemoForm.vue'
+//import Summary from './components/Summary.vue'
+//import { ISummary, IDemoInfo } from "./types";
+import { IProfile } from "./types";
 
-import { ISummary, IDemoInfo } from "./types";
+import HazardCard from './components/HazardCard.vue'
+
+import { mapState, mapGetters, } from 'vuex'
 
 export default defineComponent({
     components: {
-        DemoForm, Summary,
+        //DemoForm, 
+        //Summary,
+        HazardCard,
     },
 
     data() {
@@ -18,16 +24,32 @@ export default defineComponent({
             //json: null as any|null,
 
             //visitor demographic information
-            demo: null as null|IDemoInfo,
-            summary: null as null|ISummary,
+            //demo: null as null|IDemoInfo,
+            //summary: null as null|ISummary,
+            profile: null as null|IProfile,
+
+            hazardId: null as null|string, //selected hazard to show detail on
         }  
     },
 
-    mounted() {
-        //console.log("Profile mounted", this.$route.params.id);
+    computed: {
+        ...mapState(['hazards']),
+    },
+
+    async mounted() {
+        console.log("Profile mounted", this.$route.params.locationId);
+        
+        //load profile information for specified location
+        const location_source = "profile.json?zip=47403&age=43&gender=male";
+        const res = await fetch(location_source);
+        const json = await res.json();
+        console.log("loaded profile");
+        console.dir(json);
+        this.profile = json; 
     },
 
     methods: {
+        /*
         setDemo(demo: IDemoInfo) {
             //console.log("received demo", demo);
             this.demo = demo;
@@ -49,6 +71,7 @@ export default defineComponent({
                 console.error(err);
             })
         }
+        */
     },
 });
 
@@ -56,6 +79,7 @@ export default defineComponent({
 
 <template>
 <div class="content">
+    <!--
     <div v-if="!demo" class="demoform">
         <DemoForm @submit="setDemo"/>
     </div>
@@ -72,7 +96,23 @@ export default defineComponent({
             <Summary v-if="summary" :summary="summary"/>
         </div>
     </div>
-
+    -->
+    <div v-if="!hazardId && profile">
+        <br>
+        <br>
+        <center>
+            <h2>Common Hazards for</h2>
+            <h1 style="font-weight: normal;"><b>43/male</b> living in <b>Bloomington, IN 47403</b></h1>
+        </center>
+        <br>
+        <div class="hazards">
+            <HazardCard v-for="hazard in profile.hazards" :key="hazard.hazardId"
+                :id="hazard.hazardId" class="card" @click="hazardId = hazard.hazardId"/>
+        </div>
+    </div>
+    <div v-if="hazardId">
+        selected {{hazardId}}
+    </div>
 </div>
 </template>
 
@@ -105,5 +145,49 @@ export default defineComponent({
         background-color: #eee;
         color: $primary-color;
     }
+}
+
+.hazards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+        //width: 230px;
+        margin-bottom: 20px;
+    }
+
+
+
+    @media screen and (min-width: 10em) {
+        .card {
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (min-width: 40em) {
+        .card {
+        max-width: calc(50% -  1em);
+        }
+    }
+
+    @media screen and (min-width: 50em) {
+        .card {
+        max-width: calc(33% -  1em);
+        }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .card {
+            max-width: calc(25% - 1em);
+        }
+    }
+    padding-bottom: 50px;
+}
+
+h2 {
+    opacity: 0.8;
 }
 </style>

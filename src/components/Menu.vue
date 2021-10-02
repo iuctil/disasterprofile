@@ -23,13 +23,18 @@ export default defineComponent({
   flex-grow: 2;
   a {
     text-decoration: none;
-    color: #333;
     font-size: 13pt;
-    font-weight: bold;
     transition: 0.3s color;
   }
   a:hover {
       color: $primary-color;
   }
 }
+
+@media screen and (max-width: 55em) {
+  .menu {
+    display: none;
+  }
+}
+    
 </style>

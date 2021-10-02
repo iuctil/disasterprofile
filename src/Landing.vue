@@ -2,15 +2,18 @@
 
 import { defineComponent, defineAsyncComponent } from 'vue'
 
-//import ProfileSelecter from './components/ProfileSelecter.vue'
+import LocationSelecter from './components/LocationSelecter.vue'
 
 export default defineComponent({
     components: {
-        //ProfileSelecter,
+        LocationSelecter,
     },
 
     data() {
         return {
+            locationId: null as null|string,
+            age: null as null|number,
+            gender: null as null|string,
         }
     },
 
@@ -23,7 +26,7 @@ export default defineComponent({
 
     methods: {
         start() {
-            this.$router.push('/profile');
+            this.$router.push('/profile/'+this.locationId);
         }
     },
 });
@@ -31,17 +34,44 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="banner">
-    <div class="content">
+<div class="content">
+    <center>
         <h1>Find your disaster profiles</h1>
         <p>
-            Past natural and manmade disasters, and preparation and disaster mitigation strategies 
-            based on peer-reviewed research from the world's leading disaster experts. 
+            Enter your ZIP code / county to find our your disater risks and learn how you can mitigate 
+            your risks and deal with the aftermath of various natural and manmade disasters. 
+        </p>
+        <br>
+    </center>
+
+    <div class="banner">
+
+        <p>
+            <!--
+            <input type="button" value="Start Here" class="startbutton" @click="start"/>
+            -->
+            <b>Your Location</b>
+            <LocationSelecter v-model="locationId"/>
         </p>
         <p>
-            <input type="button" value="Start Here" class="startbutton" @click="start"/>
+            <b>Your age</b><br>
+            <input type="number" v-model.number="age"/>
         </p>
 
+        <p>
+            <b>Your gender</b>
+            <br>
+            <input type="radio" id="demoGenderMale" value="male" name="demoGender" v-model="gender">
+            <label for="demoGenderMale">Male</label><br>
+            <input type="radio" id="demoGenderFemale" value="female" name="demoGender" v-model="gender">
+            <label for="demoGenderFemale">Female</label><br>
+            <input type="radio" id="demoGenderNonBinary" value="nonbinary" name="demoGender" v-model="gender">
+            <label for="demoGenderNonBinary">Non-Binary</label><br>
+        </p>
+
+        <input type="button" value="Submit" class="startbutton" @click="start"/>
+
+        <br>
         <br>
         <p class="disclaimer">
         Intended for non-commercial, informational purposes only. See terms of use. 
@@ -49,7 +79,9 @@ export default defineComponent({
         all possible disaster risks or mitigations.
         </p>
     </div>
+    <br>
 </div>
+
 <br>
 
 <div class="content">
@@ -76,32 +108,35 @@ export default defineComponent({
 .banner {
     background-image: url('./assets/landingDrop.jpg');
     background-size: cover;
+    padding: 100px;
+    border-radius: 20px;
 
-    .content {
-        max-width: 720px;
-        margin: auto;
+    color: white;
+}
+
+.content {
+    max-width: 720px;
+    margin: auto;
+
+
+    padding: 80px 10px;
+    .disclaimer {
+        font-size: 80%;
+        opacity: 0.6;
+    }
+    ::v-deep(input[type='text']),
+    ::v-deep(input[type='number'])  {
+        background-color: #fff3;
         color: white;
+        width: 100%;
+    }
 
-        h1 {
-            color: white;
-        }
-
-        padding: 80px 10px;
-        .disclaimer {
-            font-size: 80%;
-            opacity: 0.6;
-        }
-        ::v-deep(input[type='text']) {
-            background-color: #fff3;
-            color: white;
-        }
-
-        .startbutton {
-            font-size: 15pt;
-            padding: 10px 30px;
-            text-transform: uppercase;
-            border-radius: 5px;
-        }
+    .startbutton {
+        font-size: 15pt;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        width: 100%;
     }
 }
 

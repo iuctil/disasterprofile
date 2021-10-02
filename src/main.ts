@@ -5,12 +5,15 @@ import App from './App.vue'
 
 import Landing from './Landing.vue'
 import Profile from './Profile.vue'
+import VueGtag from 'vue-gtag-next'
+
+import store from './store'
 
 //import VueMapboxTs from "vue-mapbox-ts";
 
 const routes = [
     { path: '/', component: Landing },
-    { path: '/profile', component: Profile },
+    { path: '/profile/:locationId', component: Profile },
 ]
 
 const router = createRouter({
@@ -21,6 +24,12 @@ const router = createRouter({
 const app = createApp(App);
 
 app.use(router)
-//app.use(VueMapboxTs)
+app.use(store)
+app.use(VueGtag, {
+    property: {
+      id: "GTM-TR45FZW"
+    }
+});
+
 
 app.mount('#app')
