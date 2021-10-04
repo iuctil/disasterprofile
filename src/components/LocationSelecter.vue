@@ -8,7 +8,7 @@ export default defineComponent({
 
     props: {
         modelValue: {
-            type: String as PropType<string>,
+            type: String as PropType<string>|undefined,
             //required: true,
         },
     },
@@ -21,7 +21,7 @@ export default defineComponent({
 
     created() {
         console.log("App created", this.modelValue);
-        this.query = this.modelValue;
+        if(this.modelValue) this.query = this.modelValue;
     },
 
     methods: {
@@ -41,7 +41,7 @@ export default defineComponent({
 <div class="profileselecter">
     <input type="text" v-model="query" 
         placeholder="Enter Address, ZIP Code, City, or State" 
-        @change="$emit('update:modelValue', this.query)"
+        @change="$emit('update:modelValue', query)"
         class="input"/>
 </div>
 </template>

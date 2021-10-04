@@ -43,8 +43,6 @@ export default defineComponent({
         const location_source = "profile.json?zip=47403&age=43&gender=male";
         const res = await fetch(location_source);
         const json = await res.json();
-        console.log("loaded profile");
-        console.dir(json);
         this.profile = json; 
     },
 
@@ -78,6 +76,10 @@ export default defineComponent({
         },
 
         getHazard(id : string) : IHazardInfo|undefined {
+            console.log("looking for ", id);
+            (this.hazards as IHazardInfo[]).forEach(h=>{
+                console.log(h);
+            });
             return this.hazards.find((h:IHazardInfo)=>h.id == id);
         },
 

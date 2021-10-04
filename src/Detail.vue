@@ -30,7 +30,7 @@ export default defineComponent({
 
     computed: {
         ...mapState(['hazards']),
-        hazard() {
+        hazard() : IHazardInfo|undefined {
             return (this.hazards as IHazardInfo[]).find(h=>h.id == this.$route.params.hazardId);
         },
 
@@ -45,8 +45,10 @@ export default defineComponent({
 
             for(let idx in Object.keys(this.mitigations)) {
                 const hazard = this.hazard?.mitigations[idx];
+                if(!hazard) continue;
                 const v = this.mitigations[idx];    
                 const answer = hazard.answers.find(a=>a.v == v);
+                if(!answer) continue;
                 risk *= answer.vunl;
             }
 
@@ -60,8 +62,6 @@ export default defineComponent({
         const location_source = "profile.json?zip=47403&age=43&gender=male";
         const res = await fetch(location_source);
         const json = await res.json();
-        console.log("loaded profile");
-        console.dir(json);
         this.profile = json; 
     },
 
@@ -135,7 +135,7 @@ export default defineComponent({
         {{hazard.desc}}
     </p>
     <p>
-        <a :href="hazard.url" target="external">{{hazard.url}}</a>
+        <a v-for="(url, idx) in hazard.urls" :key="idx" :href="url" target="external">{{url}}</a>
     </p>
     <br>
     <br>
@@ -144,9 +144,6 @@ export default defineComponent({
     <p v-if="hazardProfile">
         Based on past record, residents in this ZIP code have <span class="hazard-level">{{formatPercentage(hazardProfile.prob)}}</span> chance of   
         experiencing this hazard this year.
-    </p>
-    <p>
-        
     </p>
     <p>
         <img src="./assets/demo-images/noaa.png" style="width: 100%"/>

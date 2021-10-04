@@ -30,9 +30,9 @@ export interface IHazardInfo {
     impact: string,
     name: string,
     tags: string[],
-    url: string,
+    urls: string[],
     logo: string,
-    mitigations: IMitigation[],
+    mitigations: IHazardMitigation[],
 }
 
 export interface IHazardProfile {
