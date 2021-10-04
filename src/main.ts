@@ -5,6 +5,7 @@ import App from './App.vue'
 
 import Landing from './Landing.vue'
 import Profile from './Profile.vue'
+import Detail from './Detail.vue'
 import VueGtag from 'vue-gtag-next'
 
 import store from './store'
@@ -13,7 +14,8 @@ import store from './store'
 
 const routes = [
     { path: '/', component: Landing },
-    { path: '/profile/:locationId', component: Profile },
+    { path: '/profile/:locationId/:age/:gender', component: Profile },
+    { path: '/profile/:locationId/:age/:gender/:hazardId', component: Detail },
 ]
 
 const router = createRouter({

@@ -6,14 +6,12 @@ export default defineComponent({
     components: {
     },
 
-    /*
     props: {
-        value: {
+        modelValue: {
             type: String as PropType<string>,
             //required: true,
         },
     },
-    */
 
     data() {
         return {
@@ -22,15 +20,18 @@ export default defineComponent({
     },
 
     created() {
-        console.log("App created");
+        console.log("App created", this.modelValue);
+        this.query = this.modelValue;
     },
 
     methods: {
+        /*
         submit() {
             console.log("emit input", this.query)
             //this.$emit("update:locationID", this.query);
-            this.$emit("submit", "zip-us-99999");
+            this.$emit("submit", this.query);
         }
+        */
     }
 });
 
@@ -38,7 +39,10 @@ export default defineComponent({
 
 <template>
 <div class="profileselecter">
-    <input type="text" v-model="query" placeholder="Enter Address, ZIP Code, City, or State" class="input"/>
+    <input type="text" v-model="query" 
+        placeholder="Enter Address, ZIP Code, City, or State" 
+        @change="$emit('update:modelValue', this.query)"
+        class="input"/>
 </div>
 </template>
 

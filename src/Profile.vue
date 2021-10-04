@@ -5,7 +5,7 @@ import { defineComponent } from 'vue'
 //import DemoForm from './components/DemoForm.vue'
 //import Summary from './components/Summary.vue'
 //import { ISummary, IDemoInfo } from "./types";
-import { IProfile } from "./types";
+import { IProfile, IHazardInfo, IHazardProfile } from "./types";
 
 import HazardCard from './components/HazardCard.vue'
 
@@ -72,6 +72,20 @@ export default defineComponent({
             })
         }
         */
+        select(hazardId : string) {
+            const p = this.$route.params;
+            this.$router.push(`/profile/${p.locationId}/${p.age}/${p.gender}/${hazardId}`);
+        },
+
+        getHazard(id : string) : IHazardInfo|undefined {
+            return this.hazards.find((h:IHazardInfo)=>h.id == id);
+        },
+
+        sortHazard(a : IHazardProfile , b: IHazardProfile) : number {
+            if(a.prob < b.prob) return 1;
+            if(a.prob > b.prob) return -1;
+            return 0;
+        },
     },
 });
 
@@ -97,7 +111,7 @@ export default defineComponent({
         </div>
     </div>
     -->
-    <div v-if="!hazardId && profile">
+    <div v-if="profile">
         <br>
         <br>
         <center>
@@ -106,12 +120,27 @@ export default defineComponent({
         </center>
         <br>
         <div class="hazards">
-            <HazardCard v-for="hazard in profile.hazards" :key="hazard.hazardId"
-                :id="hazard.hazardId" class="card" @click="hazardId = hazard.hazardId"/>
+            <HazardCard v-for="hazard in profile.hazards.filter(h=>h.prob > 0.2).sort(sortHazard)" :key="hazard.hazardId"
+                :hazardProfile="hazard" class="card" @click="select(hazard.hazardId)"/>
         </div>
-    </div>
-    <div v-if="hazardId">
-        selected {{hazardId}}
+
+        <center>
+            <h2>Other potential Hazards</h2>
+        </center>
+        <br>
+        <div class="minor-hazards">
+            <!--TODO .. use component-->
+            <div v-for="hazard in profile.hazards.filter(h=>h.prob <= 0.2).sort(sortHazard)" :key="hazard.hazardId" 
+                class="hazard" 
+                :title="getHazard(hazard.hazardId).name">
+                <img :src="getHazard(hazard.hazardId).logo" 
+                    @click="hazardId = hazard.hazardId" 
+                    style="width: 40px; height: 40px;"/>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
     </div>
 </div>
 </template>
@@ -153,29 +182,29 @@ export default defineComponent({
     justify-content: space-between;
 
     .card {
-        //width: 230px;
         margin-bottom: 20px;
+        cursor: pointer;
     }
 
 
 
     @media screen and (min-width: 10em) {
         .card {
-        max-width: 300px;
-        margin: auto;
-        margin-bottom: 20px;
+            max-width: 300px;
+            margin: auto;
+            margin-bottom: 20px;
         }
     }
 
     @media screen and (min-width: 40em) {
         .card {
-        max-width: calc(50% -  1em);
+            max-width: calc(50% -  1em);
         }
     }
 
     @media screen and (min-width: 50em) {
         .card {
-        max-width: calc(33% -  1em);
+            max-width: calc(33% -  1em);
         }
     }
     
@@ -190,4 +219,16 @@ export default defineComponent({
 h2 {
     opacity: 0.8;
 }
+
+.minor-hazards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .hazard {
+        padding-left: 20px;
+        cursor: pointer;
+    }
+}
+
 </style>

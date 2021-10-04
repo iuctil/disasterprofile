@@ -1,6 +1,11 @@
 
-$primary-bgcolor: #f9f7f3;
-$primary-color: #28a59f;
+$primary-bgcolor: #eeeae1;
+
+$primary-color: #387ca3;
+$primary-color-dark: darken($primary-color, 10%);
+
+$secondary-color: #a3babb;
+$secondary-color-dark: darken($secondary-color, 10%);
 
 $primary-text-color: #444;
-$primary-color-dark: #28514f;
+

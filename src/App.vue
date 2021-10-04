@@ -113,4 +113,13 @@ hr {
     border-bottom: 1px solid #0004;
     margin: 20px 0;
 }
+span.tag {
+    background-color: #999;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-transform: uppercase;;
+    font-weight: bold;
+}
 </style>

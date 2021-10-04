@@ -11,9 +11,9 @@ export default defineComponent({
 
     data() {
         return {
-            locationId: null as null|string,
-            age: null as null|number,
-            gender: null as null|string,
+            locationId: "zip-47403" as null|string,
+            age: 43 as null|number,
+            gender: "male" as null|string,
         }
     },
 
@@ -26,7 +26,7 @@ export default defineComponent({
 
     methods: {
         start() {
-            this.$router.push('/profile/'+this.locationId);
+            this.$router.push(`/profile/${this.locationId}/${this.age}/${this.gender}`);
         }
     },
 });
@@ -106,7 +106,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .banner {
-    background-image: url('./assets/landingDrop.jpg');
+    background-image: url('./assets/landingDrop3.jpg');
     background-size: cover;
     padding: 100px;
     border-radius: 20px;

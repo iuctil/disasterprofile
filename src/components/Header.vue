@@ -36,14 +36,14 @@ export default defineComponent({
       <h1>{{siteName}}</h1>
     </div>
     <!--<ProfileSelecter v-if="$route.path != '/'" style="background-color: #0003;"/>-->
-    <Menu style="margin-left: 20px; text-align: right;"/>
+    <Menu style="text-align: right;"/>
   </div>
 </div>
 </template>
 
 <style lang="scss" scoped>
 .header {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #0001;
   padding: 10px;
 }
 .content {
@@ -71,7 +71,7 @@ img.logo {
   margin-right: 10px;
 }
 
-::v-deep(.menu a) {
+::v-deep(.menu a:not(:last-child)) {
   padding-right: 30px;
 }
 </style>
