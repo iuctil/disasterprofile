@@ -6,6 +6,7 @@ import { IHazardInfo, IProfile, IHazardProfile } from "./types";
 
 import HazardCard from './components/HazardCard.vue'
 import Mitigation from './components/Mitigation.vue'
+import RiskMeter from "./components/RiskMeter.vue"
 
 import { mapState, mapGetters, } from 'vuex'
 
@@ -13,10 +14,9 @@ import numeral from 'numeral';
 
 export default defineComponent({
     components: {
-        //DemoForm, 
-        //Summary,
         HazardCard,
         Mitigation,
+        RiskMeter,
     },
 
     data() {
@@ -170,7 +170,11 @@ export default defineComponent({
     </p>
     
     <Mitigation v-for="(mitigation, midx) in hazard.mitigations" :key="midx" :mitigation="mitigation" v-model="mitigations[midx]"/>
-    <h2 style="text-align: right;">Overall Risk: <b>{{formatPercentage(totalRisk)}}</b></h2>
+
+    <center>
+        <RiskMeter :risk="totalRisk"/>
+        <h2>Overall Risk: <b>{{formatPercentage(totalRisk)}}</b></h2>
+    </center>
 
     <br>
     <br>
