@@ -10,5 +10,4 @@
        { "hazardId": "windstorm", "prob": 0.1 },
        { "hazardId": "snowstorm", "prob": 0.1 }
     ]
-
 }

@@ -15,7 +15,7 @@ export default defineComponent({
     },
 
     computed: {
-        ...mapState(['siteName']),
+        ...mapState(['config']),
     },
 
     methods: {
@@ -33,7 +33,7 @@ export default defineComponent({
   <div class="content">
     <div class="title" @click="clicktitle">
       <img alt="logo" src="../assets/logo.png" class="logo"/>
-      <h1>{{siteName}}</h1>
+      <h1>{{config.siteName}}</h1>
     </div>
     <!--<ProfileSelecter v-if="$route.path != '/'" style="background-color: #0003;"/>-->
     <Menu style="text-align: right;"/>

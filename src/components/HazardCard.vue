@@ -5,6 +5,8 @@ import { mapState, mapGetters, } from 'vuex'
 
 import { IHazardInfo, IHazardProfile } from '../types';
 
+import numeral from 'numeral'
+
 export default defineComponent({
     
     props: {
@@ -13,6 +15,11 @@ export default defineComponent({
             required: true,
         },
     },
+
+    data() {
+        return {
+        }
+    },
     
     computed: {
         ...mapState(['hazards']),
@@ -20,30 +27,32 @@ export default defineComponent({
             return this.hazards.find((h:IHazardInfo)=>h.id == this.hazardProfile.hazardId);
         }
     },
-    data() {
-        return {
-        }
-    }
+    methods: {
+        formatProb(p : number) {
+            return numeral(p).format("0,0.0%");
+        },
+    },
+
 });
 
 </script>
 
 <template>
 <div class="hazard-card" v-if="hazard">
-    <img :src="hazard.logo" class="logo" style="width: 100%; height: 150px;"/>
-    <div class="prob">{{hazardProfile.prob*100}}%</div>
+    <div class="prob">{{formatProb(hazardProfile.prob)}}</div>
     <div class="header">
-        <h2>{{hazard.name}}</h2> 
+        <img :src="hazard.logo" class="logo"/>
+        <h2 class="title">{{hazard.name}}</h2> 
+        <p class="desc">{{hazard.shortDesc}}</p>
     </div>
-    <p class="desc">{{hazard.shortDesc}}</p>
 </div>
 </template>
 
 <style lang="scss" scoped>
+/*
 .hazard-card {
     height: 350px;
     background: $secondary-color-dark;
-    /*background: linear-gradient(45deg, $primary-color-dark 0%, $secondary-color-dark 100%);*/
 
     display: inline-block;
     border-radius: 10px;
@@ -54,7 +63,47 @@ export default defineComponent({
 
     position: relative;
 }
+*/
+.hazard-card {
+    width: 100%;
+    background: white; 
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
 
+    transition: 0.2s background;
+    
+    .header {
+        .logo {
+            width: 100px; 
+            float: left;
+        }
+        .title {
+            color: $primary-color-dark;
+            margin-bottom: 0;
+            margin-left: 120px;
+        }
+        .desc {
+            margin-left: 120px;
+            font-size: 10pt;
+        }
+    }
+
+    .prob {
+        float: right;
+        font-size: 130%;
+        background-color: $primary-color-dark;
+        padding: 0px 15px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    &:hover {
+        background: #0001;
+    }
+}
+
+/*
 .header {
     padding: 0 10px;
     h2 {
@@ -73,10 +122,6 @@ export default defineComponent({
     border-radius: 10px;
     font-style: italic;
 }
+*/
 
-.desc {
-    font-size: 12px;
-    padding: 0 10px;
-    font-size: 80%;
-}
 </style>

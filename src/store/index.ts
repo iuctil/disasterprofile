@@ -7,10 +7,14 @@ import { IHazardInfo } from '../types';
 import hazards from './hazards';
 
 const state = {
-    siteName: "disasterProfile.org",
     test: 0,
     //vue-i18n parser returns object wrapped in (ctx) callbacks.. we want plain object!
     hazards: hazards as IHazardInfo[],
+
+    config: {
+        siteName: "disasterProfile.org",
+        apiHost: "https://api.disasterprofile.org",
+    },
 }
 
 const mutations = {

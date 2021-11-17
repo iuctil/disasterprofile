@@ -2,7 +2,7 @@
 
 import { defineComponent, PropType } from 'vue'
 
-import { IHazardMitigation } from "../types";
+import { IMitigation } from "../types";
 
 export default defineComponent({
     components: {
@@ -10,12 +10,11 @@ export default defineComponent({
 
     props: {
         mitigation: {
-            type: Object as PropType<IHazardMitigation>,
+            type: Object as PropType<IMitigation>,
             required: true,
         },
         modelValue: {
             type: String as PropType<string>,
-            required: true,
         },
     },
 
@@ -53,11 +52,11 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="mitigation">
+<div class="mitigation shadow">
     <div class="qa">
-        <div v-if="vunl">
-            <span class="vunl vunl-sustain" v-if="vunl == 1.0">Vulnerable</span>
-            <span class="vunl vunl-lower" v-if="vunl < 1.0">Lowers Vulnerability</span>
+        <div v-if="vunl && v">
+            <span class="vunl vunl-sustain" v-if="vunl == 1.0">Bad</span>
+            <span class="vunl vunl-lower" v-if="vunl < 1.0">Good</span>
         </div>
         <div class="question"><h4>{{mitigation.question}}</h4></div>
         <div class="answers">
@@ -78,6 +77,7 @@ export default defineComponent({
 .mitigation {
     margin-bottom: 10px;
     background-color: white;
+    border-radius: 10px;
     padding: 10px;
     .hint {
         opacity: 0.8;

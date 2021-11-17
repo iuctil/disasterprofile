@@ -11,7 +11,7 @@ export default defineComponent({
 
     data() {
         return {
-            locationId: "zip-47403" as null|string,
+            locationId: "" as null|string,
             age: 43 as null|number,
             gender: "male" as null|string,
         }
@@ -38,8 +38,8 @@ export default defineComponent({
     <center>
         <h1>Find your disaster profiles</h1>
         <p>
-            Enter your ZIP code / county to find our your disater risks and learn how you can mitigate 
-            your risks and deal with the aftermath of various natural and manmade disasters. 
+            Enter your ZIP code / county to discover your likely disater scenarios and learn how you can avoid/prepare
+            for those disasters.
         </p>
         <br>
     </center>

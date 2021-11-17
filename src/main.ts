@@ -7,6 +7,8 @@ import Landing from './Landing.vue'
 import Profile from './Profile.vue'
 import Detail from './Detail.vue'
 import VueGtag from 'vue-gtag-next'
+//import ElementPlus from 'element-plus'
+//import 'element-plus/dist/index.css'
 
 import store from './store'
 
@@ -32,6 +34,6 @@ app.use(VueGtag, {
       id: "GTM-TR45FZW"
     }
 });
-
+//app.use(ElementPlus)
 
 app.mount('#app')

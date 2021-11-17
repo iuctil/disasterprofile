@@ -122,4 +122,10 @@ span.tag {
     text-transform: uppercase;;
     font-weight: bold;
 }
+.center {
+    text-align: center;
+}
+.shadow {
+    box-shadow: 1px solid #0003;
+}
 </style>

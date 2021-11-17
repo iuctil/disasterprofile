@@ -10,7 +10,7 @@ export default defineComponent({
         Menu,
     },
     computed: {
-        ...mapState(['siteName']),
+        ...mapState(['config']),
     },
     data() {
         return {
@@ -26,7 +26,7 @@ export default defineComponent({
     <div class="content">
         <div class="cols">
             <div class="col col-1">
-                <h2>{{siteName}}</h2>
+                <h2>{{config.siteName}}</h2>
                 <p>CTIL @ Indiana University</p>
                 <Menu class="menu"/>
             </div>
