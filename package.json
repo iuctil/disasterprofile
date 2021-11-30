@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "ssh dev.ctil.iu.edu:~/git/disasterprofile/build.sh"
   },
   "dependencies": {
     "element-plus": "^1.1.0-beta.20",
