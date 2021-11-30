@@ -15,22 +15,22 @@ export default defineComponent({
         return {
             //visitor demographic information
             demo: {
-                locationID: null as null|string, 
+                locationId: undefined as undefined|string,
 
-                age: null as null|number,
-                gender: null as null|"male"|"female"|"nonbinary", 
-                demoLiveNearFloodzone: null as null|boolean, //yes/no
+                age: undefined as undefined|number,
+                gender: undefined as undefined|"male"|"female"|"nonbinary", 
+                demoLiveNearFloodzone: undefined as undefined|boolean, //yes/no
 
-                driveMinutes: null as null|number,
+                driveMinutes: undefined as undefined|number,
             },
-        }  
+        }
     },
 
     emits: {
         submit: (payload: IDemoInfo)=>{
             // TODO perform form validation
-            if(!payload.locationID) {
-                console.error("locationID is required");
+            if(!payload.locationId) {
+                console.error("locationId is required");
                 return false;
             }
             console.log("demo form is valid!");
@@ -47,12 +47,11 @@ export default defineComponent({
 <template>
 
 <div>
-    
     <p>
         Please specify where you currently live.
     </p>
 
-    <LocationSelecter v-model.locationID="demo.locationID"/>
+    <LocationSelecter v-model.locationId="demo.locationId"/>
 
     <hr>
     <p>

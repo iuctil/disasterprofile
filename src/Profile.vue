@@ -178,7 +178,11 @@ export default defineComponent({
         <br>
         <center>
             <h2>Disaster Profile for</h2>
-            <h1 style="font-weight: normal;"><b>{{$route.params.age}}/{{$route.params.gender}}</b> living in <b>{{profile.city}}, {{profile.state}} {{profile.zip}}</b></h1>
+            <h1 style="font-weight: normal;">
+                <b>{{$route.params.age}}/{{$route.params.gender}}</b> 
+                living in 
+                <b>{{profile.city}}, {{profile.state}} {{profile.zip}}</b>
+            </h1>
             <p>You have higher risk of experiencing the following disasters. Click a disaster to learn more.</p>
         </center>
         <br>

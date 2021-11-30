@@ -1,16 +1,7 @@
-/*
 export interface ISummary {
     location: [number, number]
 }
 
-export interface IDemoInfo {
-    locationId: null|string
-    age: null|number
-    gender: null|"male"|"female"|"nonbinary" 
-    demoLiveNearFloodzone: null|boolean
-    driveMinutes: null|number
-}
-*/
 
 export interface IMitigationAnswers {
     v: null|string,
@@ -43,11 +34,23 @@ export interface IHazardProfile {
 }
 
 export interface IProfile {
-    locationId: string,
-    lonlat: [number, number], 
+    locationId: string
+    lonlat: [number, number]
 
-    hazards: [IHazardProfile],
+    hazards: [IHazardProfile]
     noaa: {[key: string]: { //storm type
         [key: string]: number, //year / count
-    }},
+    }}
+
+    city: string
+    state: string
+    zip: string
+}
+
+export interface IDemoInfo {
+    locationId: undefined|string
+    age: undefined|number
+    gender: undefined|"male"|"female"|"nonbinary" 
+    demoLiveNearFloodzone: undefined|boolean
+    driveMinutes: undefined|number
 }

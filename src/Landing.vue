@@ -11,9 +11,9 @@ export default defineComponent({
 
     data() {
         return {
-            locationId: "" as null|string,
-            age: 43 as null|number,
-            gender: "male" as null|string,
+            locationId: "",
+            age: 43,
+            gender: "male",
         }
     },
 

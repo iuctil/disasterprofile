@@ -72,7 +72,7 @@ export default defineComponent({
                 this.loading = true
                 fetch(this.config.apiHost+"/profile/keys?q="+query).then(res=>res.json()).then(res=>{
                     this.loading = false
-                    this.options = res.map(r=>({value: r.id, label: r.name}));
+                    this.options = res.map((r:any)=>({value: r.id, label: r.name}));
                 });
             } else {
                 this.options = []

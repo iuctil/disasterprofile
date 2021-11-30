@@ -16,28 +16,29 @@ const state = {
         apiHost: "https://api.disasterprofile.org",
     },
 }
+//export type IState = typeof state;
 
-const mutations = {
-    incTest(state) {
-        state.test++; 
-    },
-}
-
-const actions = {
-    saySomething(context) {
-        context.commit("intTest");
-    },
-}
-
-
-const getters = {
-    /*
-    getHazardById:(state)=>(id: string) : IHazard=>{
-        return state.hazards
+const store = createStore({ 
+    state, 
+    mutations: {
+        incTest(state) {
+            state.test++; 
+        },
+    }, 
+    
+    actions: {
+        saySomething(context) {
+            context.commit("intTest");
+        },        
+    }, 
+    
+    getters: {
+        /*
+        getHazardById:(state)=>(id: string) : IHazard=>{
+            return state.hazards
+        }
+        */
     }
-    */
-}
-
-const store = createStore({ state, mutations, actions, getters })
+})
 export default store;
 

@@ -5,8 +5,8 @@ import { defineComponent } from 'vue'
 import { IHazardInfo, IProfile, IHazardProfile } from "./types";
 
 import HazardCard from './components/HazardCard.vue'
-import Mitigation from './components/Mitigation.vue'
-import RiskMeter from "./components/RiskMeter.vue"
+//import Mitigation from './components/Mitigation.vue'
+//import RiskMeter from "./components/RiskMeter.vue"
 
 import { mapState, mapGetters, } from 'vuex'
 
@@ -15,8 +15,8 @@ import numeral from 'numeral';
 export default defineComponent({
     components: {
         HazardCard,
-        Mitigation,
-        RiskMeter,
+        //Mitigation,
+        //RiskMeter,
     },
 
     data() {
@@ -194,7 +194,7 @@ export default defineComponent({
     <p>
         You can take steps to reduce the probabilities for this disaster scenarios.
     </p>
-
+    <!--
     <div class="center">
         <RiskMeter :risk="adjustedProb"/>
         <br>
@@ -203,8 +203,10 @@ export default defineComponent({
             <b style="font-size: 150%;">{{formatPercentage(adjustedProb)}}</b><br>
         </h2>
     </div>
-        
+
     <Mitigation v-for="(mitigation, midx) in hazard.probMitigations" :key="midx" :mitigation="mitigation" v-model="probMitigations[midx]" @change="adjustProb"/>
+    -->
+    {{hazard.probMitigations}}
 
     <br>
     <br>
@@ -224,6 +226,7 @@ export default defineComponent({
         You can take steps to reduce the impact of this disaster.
     </p>
 
+    <!--
     <div class="center">
         <RiskMeter :risk="adjustedImpact"/>
         <br>
@@ -232,8 +235,12 @@ export default defineComponent({
             <b style="font-size: 150%;">{{formatPercentage(adjustedImpact)}}</b>
         </h2>
     </div>
-        
+
     <Mitigation v-for="(mitigation, midx) in hazard.impactMitigations" :key="midx" :mitigation="mitigation" v-model="impactMitigations[midx]" @change="adjustImpact"/>  
+    -->
+
+    {{hazard.impactMitigations}}
+
 
     <br>
     <br>
