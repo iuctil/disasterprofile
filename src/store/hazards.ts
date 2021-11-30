@@ -8,7 +8,7 @@ const hazards = [
     urls: [
       "https://someurl.com/avalanche"
     ],
-    logo: "/src/assets/images/hazards/avalanche.jpg"
+    logo: "images/hazards/avalanche.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -19,7 +19,7 @@ const hazards = [
     urls: [
       "https://someurl.com/drought"
     ],
-    logo: "/src/assets/images/hazards/drought.jpg"
+    logo: "images/hazards/drought.jpg"
   },
 
   {
@@ -31,7 +31,7 @@ const hazards = [
     urls: [
       "https://someurl.com"
     ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -43,7 +43,7 @@ const hazards = [
     urls: [
       "https://someurl.com/duststorm"
     ],
-    logo: "/src/assets/images/hazards/duststorm.jpg"
+    logo: "images/hazards/duststorm.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -54,7 +54,7 @@ const hazards = [
     urls: [
       "https://someurl.com/earthquake"
     ],
-    logo: "/src/assets/images/hazards/earthquake.jpg"
+    logo: "images/hazards/earthquake.jpg"
   },
   {
     id: "wildfire",
@@ -65,7 +65,7 @@ const hazards = [
     urls: [
       "https://someurl.com/forestfire"
     ],
-    logo: "/src/assets/images/hazards/forestfire.jpg"
+    logo: "images/hazards/forestfire.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -76,7 +76,7 @@ const hazards = [
     urls: [
       "https://someurl.com/hailstorm"
     ],
-    logo: "/src/assets/images/hazards/hailstorm.jpg"
+    logo: "images/hazards/hailstorm.jpg"
   },
 
   {
@@ -88,7 +88,7 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/src/assets/images/hazards/hurricane.jpg"
+    logo: "images/hazards/hurricane.jpg"
   },
 
   {
@@ -100,7 +100,7 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/src/assets/images/hazards/hurricane.jpg"
+    logo: "images/hazards/hurricane.jpg"
   },
 
   {
@@ -112,7 +112,7 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/src/assets/images/hazards/hurricane.jpg"
+    logo: "images/hazards/hurricane.jpg"
   },
 
   {
@@ -124,7 +124,7 @@ const hazards = [
     urls: [
       "https://someurl.com/sandstorm"
     ],
-    logo: "/src/assets/images/hazards/sandstorm.jpg"
+    logo: "images/hazards/sandstorm.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -135,7 +135,7 @@ const hazards = [
     urls: [
       "https://someurl.com/sinkhole"
     ],
-    logo: "/src/assets/images/hazards/sinkhole.jpg"
+    logo: "images/hazards/sinkhole.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -146,7 +146,7 @@ const hazards = [
     urls: [
       "https://someurl.com/thunderstorm"
     ],
-    logo: "/src/assets/images/hazards/thunderstorm.jpg"
+    logo: "images/hazards/thunderstorm.jpg"
   },
 
   {
@@ -158,7 +158,7 @@ const hazards = [
     urls: [
       "https://someurl.com/tornado"
     ],
-    logo: "/src/assets/images/hazards/tornado.jpg"
+    logo: "images/hazards/tornado.jpg"
   },
 
   {
@@ -168,7 +168,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "life/health", "property" ],
     urls: [ "https://someurl.com/tornado" ],
-    logo: "/src/assets/images/hazards/tornado.jpg"
+    logo: "images/hazards/tornado.jpg"
   },
 
   {
@@ -180,7 +180,7 @@ const hazards = [
     urls: [
       "https://someurl.com/tsunami"
     ],
-    logo: "/src/assets/images/hazards/tsunami.jpg"
+    logo: "images/hazards/tsunami.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -191,7 +191,7 @@ const hazards = [
     urls: [
       "https://someurl.com/volcano"
     ],
-    logo: "/src/assets/images/hazards/volcano.jpg"
+    logo: "images/hazards/volcano.jpg"
   },
   {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -202,7 +202,7 @@ const hazards = [
     urls: [
       "https://someurl.com/windstorm"
     ],
-    logo: "/src/assets/images/hazards/windstorm.jpg"
+    logo: "images/hazards/windstorm.jpg"
   },
 
   {
@@ -212,7 +212,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/icestorm.jpg"
+    logo: "images/hazards/icestorm.jpg"
   },
 
   {
@@ -222,7 +222,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/icestorm.jpg"
+    logo: "images/hazards/icestorm.jpg"
   },
 
   {
@@ -232,7 +232,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/snowstorm.jpg"
+    logo: "images/hazards/snowstorm.jpg"
   },
 
   {
@@ -242,7 +242,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/snowstorm.jpg"
+    logo: "images/hazards/snowstorm.jpg"
   },
 
   {
@@ -252,7 +252,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -262,7 +262,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -272,7 +272,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -282,7 +282,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -292,7 +292,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -302,7 +302,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -312,7 +312,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -322,7 +322,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -332,7 +332,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -342,7 +342,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -352,7 +352,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/snowstorm.jpg"
+    logo: "images/hazards/snowstorm.jpg"
   },
 
   {
@@ -362,7 +362,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/snowstorm.jpg"
+    logo: "images/hazards/snowstorm.jpg"
   },
 
   {
@@ -372,7 +372,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/snowstorm.jpg"
+    logo: "images/hazards/snowstorm.jpg"
   },
 
   {
@@ -382,7 +382,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -392,7 +392,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/unknown.jpg"
+    logo: "images/hazards/unknown.jpg"
   },
 
   {
@@ -402,7 +402,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/flood.jpg"
+    logo: "images/hazards/flood.jpg"
   },
 
   {
@@ -412,7 +412,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/stormsurge.jpg"
+    logo: "images/hazards/stormsurge.jpg"
   },
 
   {
@@ -422,7 +422,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/stormsurge.jpg"
+    logo: "images/hazards/stormsurge.jpg"
   },
 
   {
@@ -432,7 +432,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/flood.jpg"
+    logo: "images/hazards/flood.jpg"
   },
 
   {
@@ -442,7 +442,7 @@ const hazards = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/src/assets/images/hazards/flood.jpg"
+    logo: "images/hazards/flood.jpg"
   },
 
   {
@@ -456,7 +456,7 @@ const hazards = [
       "https://www.earthnetworks.com/flooding/",
       "https://www.valuepenguin.com/homeowners-insurance/how-to-prevent-home-flooding"
     ],
-    logo: "/src/assets/images/hazards/flood.jpg",
+    logo: "images/hazards/flood.jpg",
 
     probMitigations: [
       {
@@ -567,7 +567,7 @@ const hazards = [
     urls: [
       "https://en.wikipedia.org/wiki/Ice_storm/"
     ],
-    logo: "/src/assets/images/hazards/icestorm.jpg"
+    logo: "images/hazards/icestorm.jpg"
   },
   {
     shortDesc: "No. 2 killer of Americans in 2020, accounting for about 18% of overall deaths",
@@ -576,7 +576,7 @@ const hazards = [
     name: "Cancer",
     assets: [ "life/health" ],
     urls: "https://somewhere.com/cancer/",
-    logo: "/src/assets/images/hazards/cancer.jpg"
+    logo: "images/hazards/cancer.jpg"
   },
   {
     shortDesc: "Heart disease remained the top killer in the U.S. in 2020, accounting for about 21% of deaths and for 31,841 more deaths than in 2019. The nearly 5% increase in heart disease deaths in 2020 was the largest such increase since 2012, researchers said.",
@@ -587,7 +587,7 @@ const hazards = [
     urls: [
       "https://somewhere.com/heartdisease/"
     ],
-    logo: "/src/assets/images/hazards/heartdisease.jpg"
+    logo: "images/hazards/heartdisease.jpg"
   },
   {
     id: "economic-collapse",
@@ -598,7 +598,7 @@ const hazards = [
     urls: [
       "https://en.wikipedia.org/wiki/Economic_collapse"
     ],
-    logo: "/src/assets/images/hazards/economiccollapse.jpg"
+    logo: "images/hazards/economiccollapse.jpg"
   },
   {
     id: "house-fire",
@@ -607,7 +607,7 @@ const hazards = [
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/housefire.jpg"
+    logo: "images/hazards/housefire.jpg"
   },
   {
     id: "id-theft",
@@ -616,7 +616,7 @@ const hazards = [
     desc: "",
     assets: [ "information" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/idtheft.jpg"
+    logo: "images/hazards/idtheft.jpg"
   },
   {
     id: "car-accident",
@@ -625,7 +625,7 @@ const hazards = [
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/caraccident.jpg"
+    logo: "images/hazards/caraccident.jpg"
   },
   {
     id: "power-failure",
@@ -634,7 +634,7 @@ const hazards = [
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/powerfailure.jpg"
+    logo: "images/hazards/powerfailure.jpg"
   },
   {
     id: "cyber-attack",
@@ -643,7 +643,7 @@ const hazards = [
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/cyberattack.jpg"
+    logo: "images/hazards/cyberattack.jpg"
   },
   {
     id: "riots",
@@ -652,7 +652,7 @@ const hazards = [
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/src/assets/images/hazards/riots.jpg"
+    logo: "images/hazards/riots.jpg"
   },
 
 ];
