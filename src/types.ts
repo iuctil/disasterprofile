@@ -23,7 +23,7 @@ export interface IHazardInfo {
     assets: string[],
     urls: string[],
     logo: string,
-    
+
     probMitigations: IMitigation[],
     impactMitigations: IMitigation[],
 }
@@ -31,8 +31,17 @@ export interface IHazardInfo {
 export interface IHazardProfile {
     hazardId: string,
     prob: number,
-}
+    source: string,
 
+    //source: CDC-COD
+    deaths?: number,
+    totalDeaths?: number,
+    sourceYear: number,
+
+    //source: NOAA-STORM-EVENTS
+    experiencedYears?: number,
+    totalYears?: number,
+}
 export interface IProfile {
     locationId: string
     lonlat: [number, number]

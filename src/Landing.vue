@@ -11,6 +11,8 @@ export default defineComponent({
 
     data() {
         return {
+            errors: [],
+
             locationId: "",
             age: 43,
             gender: "male",
@@ -25,7 +27,16 @@ export default defineComponent({
     },
 
     methods: {
+        validate() : boolean {
+            this.errors = [];
+            if(!this.locationId) this.errors.push("Please specify your location");
+            if(!this.age) this.errors.push("Please specify your age");
+            if(!this.gender) this.errors.push("Please specify your gender");
+            return this.errors.length == 0;
+        },
+
         start() {
+            if(!this.validate()) return;
             this.$router.push(`/profile/${this.locationId}/${this.age}/${this.gender}`);
         }
     },
@@ -46,10 +57,12 @@ export default defineComponent({
 
     <div class="banner">
 
+        <p v-for="(error, idx) in errors" :key="idx" class="error">
+            {{error}}
+        </p>
+
         <p>
-            <!--
-            <input type="button" value="Start Here" class="startbutton" @click="start"/>
-            -->
+            <!-- <input type="button" value="Start Here" class="startbutton" @click="start"/> -->
             <b>Your Location</b>
             <LocationSelecter v-model="locationId"/>
         </p>
@@ -117,7 +130,6 @@ export default defineComponent({
 .content {
     max-width: 720px;
     margin: auto;
-
 
     padding: 80px 10px;
     .disclaimer {

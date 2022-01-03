@@ -5,8 +5,6 @@ import { defineComponent } from 'vue'
 import { IHazardInfo, IProfile, IHazardProfile } from "./types";
 
 import HazardCard from './components/HazardCard.vue'
-//import Mitigation from './components/Mitigation.vue'
-//import RiskMeter from "./components/RiskMeter.vue"
 
 import { mapState, mapGetters, } from 'vuex'
 
@@ -28,9 +26,9 @@ export default defineComponent({
             adjustedImpact: 0,
 
             //stores answers given by mitigations
-            probMitigations: {} as any, 
-            impactMitigations: {} as any, 
-        }  
+            probMitigations: {} as any,
+            impactMitigations: {} as any,
+        }
     },
 
     computed: {
@@ -164,7 +162,7 @@ export default defineComponent({
     </p>
     <br>
     <br>
-    
+
     <h2>Probability</h2>
     <p v-if="hazardProfile">
         Residents in living under this ZIP code have <span class="hazard-level">{{formatPercentage(hazardProfile.prob)}}</span> chance of   

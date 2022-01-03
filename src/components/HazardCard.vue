@@ -5,10 +5,16 @@ import { mapState, mapGetters, } from 'vuex'
 
 import { IHazardInfo, IHazardProfile } from '../types';
 
+import Prob from './Prob.vue'
+
 import numeral from 'numeral'
 
 export default defineComponent({
-    
+
+    components: {
+        Prob,
+    },
+
     props: {
         hazardProfile: {
             type: Object as PropType<IHazardProfile>,
@@ -20,7 +26,7 @@ export default defineComponent({
         return {
         }
     },
-    
+
     computed: {
         ...mapState(['hazards']),
         hazard() : IHazardInfo|undefined {
@@ -28,9 +34,12 @@ export default defineComponent({
         }
     },
     methods: {
-        formatProb(p : number) {
+        formatProb(p: number) {
             return numeral(p).format("0,0.0%");
         },
+        formatNumber(n: number) {
+            return numeral(n).format("0,0");
+        }
     },
 
 });
@@ -39,11 +48,21 @@ export default defineComponent({
 
 <template>
 <div class="hazard-card" v-if="hazard">
-    <div class="prob">{{formatProb(hazardProfile.prob)}}</div>
+    <!--<div class="prob">{{formatProb(hazardProfile.prob)}}</div>-->
+    <Prob :prob="hazardProfile.prob"/>
     <div class="header">
         <img :src="hazard.logo" class="logo"/>
         <h2 class="title">{{hazard.name}}</h2> 
         <p class="desc">{{hazard.shortDesc}}</p>
+        <p class="desc" v-if="hazardProfile.source == 'CDC-COD' && hazardProfile.deaths && hazardProfile.totalDeaths">
+            In the year <b>{{hazardProfile.sourceYear}}</b>, there has been 
+            <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i> 
+            deaths in your state (total reported death of <b>{{formatNumber(hazardProfile.totalDeaths)}}</b>).
+        </p>
+        <p class="desc" v-if="hazardProfile.source == 'NOAA-STORM-EVENTS'">
+            In the last <b>{{hazardProfile.totalYears}}</b> years, there has been 
+            <b>{{hazardProfile.experiencedYears}}</b> years with at least 1 storm events of this type.
+        </p>
     </div>
 </div>
 </template>
@@ -66,16 +85,17 @@ export default defineComponent({
 */
 .hazard-card {
     width: 100%;
-    background: white; 
+    box-shadow: 2px 2px 8px #0002;
+    background-color: white;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
 
-    transition: 0.2s background;
-    
+    transition: 0.3s box-shadow;
+
     .header {
         .logo {
-            width: 100px; 
+            width: 100px;
             float: left;
         }
         .title {
@@ -89,17 +109,8 @@ export default defineComponent({
         }
     }
 
-    .prob {
-        float: right;
-        font-size: 130%;
-        background-color: $primary-color-dark;
-        padding: 0px 15px;
-        border-radius: 10px;
-        color: white;
-    }
-
     &:hover {
-        background: #0001;
+    box-shadow: 2px 2px 10px #0003;
     }
 }
 

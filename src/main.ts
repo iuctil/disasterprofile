@@ -3,21 +3,24 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import App from './App.vue'
 
+import About from './About.vue'
+import Method from './Method.vue'
+import Contact from './Contact.vue'
+
 import Landing from './Landing.vue'
 import Profile from './Profile.vue'
 import Detail from './Detail.vue'
 import VueGtag from 'vue-gtag-next'
-//import ElementPlus from 'element-plus'
-//import 'element-plus/dist/index.css'
 
 import store from './store'
-
-//import VueMapboxTs from "vue-mapbox-ts";
 
 const routes = [
     { path: '/', component: Landing },
     { path: '/profile/:locationId/:age/:gender', component: Profile },
     { path: '/profile/:locationId/:age/:gender/:hazardId', component: Detail },
+    { path: '/about', component: About },
+    { path: '/methods', component: Method },
+    { path: '/contact', component: Contact },
 ]
 
 const router = createRouter({

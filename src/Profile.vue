@@ -187,6 +187,7 @@ export default defineComponent({
         </center>
         <br>
         <div class="hazards">
+            <p style="float: right; width: 100%; font-size: 120%; padding-right: 20px; margin-bottom: 10px; opacity: 0.5;">Risks</p>
             <HazardCard v-for="hazard in profile.hazards.filter(h=>h.prob > 0.2).sort(sortHazard)" :key="hazard.hazardId"
                 :hazardProfile="hazard" class="card" @click="select(hazard.hazardId)"/>
         </div>

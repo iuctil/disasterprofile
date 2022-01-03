@@ -9,3 +9,7 @@ $secondary-color-dark: darken($secondary-color, 10%);
 
 $primary-text-color: #444;
 
+$error-color: red;
+$error-background-color: lighten($error-color, 40%);
+
+

@@ -128,4 +128,12 @@ span.tag {
 .shadow {
     box-shadow: 1px solid #0003;
 }
+
+.error {
+    color: $error-color;
+    background-color: $error-background-color;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 </style>
