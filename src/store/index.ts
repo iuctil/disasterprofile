@@ -9,11 +9,12 @@ import hazards from './hazards';
 const state = {
     test: 0,
     //vue-i18n parser returns object wrapped in (ctx) callbacks.. we want plain object!
-    hazards: hazards as IHazardInfo[],
+    hazards: hazards as {[key: string]: IHazardInfo},
 
     config: {
         siteName: "disasterProfile.org",
         apiHost: "https://api.disasterprofile.org",
+        mdHost: "//raw.githubusercontent.com/iuctil/disasterprofile/master/content",
     },
 }
 //export type IState = typeof state;

@@ -8,25 +8,32 @@ export default defineComponent({
             type: Number,
             required: true,
         },
+    },
+
+    methods: {
+        formatNumber(p: number) {
+            return (p*100).toFixed(1)+"%";
+        }
     }
 });
 
 </script>
 
 <template>
-<span class="prob prob-2sig" v-if="prob>0.977">Very High</span>
-<span class="prob prob-1sig" v-else-if="prob>0.841">High</span>
-<span class="prob prob-0sig" v-else-if="prob>0.5">Higher</span>
-<span class="prob prob-0sig-neg" v-else-if="prob>0.159">Lower</span>
-<span class="prob prob-1sig-neg" v-else-if="prob>0.023">Low</span>
-<span class="prob prob-2sig-neg" v-else>Very Low</span>
+<div class="prob" :title="formatNumber(prob)">
+    <span class="prob-2sig" v-if="prob > 0.977">Very High</span>
+    <span class="prob-1sig" v-else-if="prob>0.841">High</span>
+    <span class="prob-0sig" v-else-if="prob>0.5">Higher</span>
+    <span class="prob-0sig-neg" v-else-if="prob>0.159">Lower</span>
+    <span class="prob-1sig-neg" v-else-if="prob>0.023">Low</span>
+    <span class="prob-2sig-neg" v-else>Very Low</span>
+</div>
 </template>
 
 <style lang="scss" scoped>
-.prob {
+.prob span {
     float: right;
     font-size: 120%;
-    background-color: $primary-color-dark;
     padding: 0px 10px;
     border-radius: 5px;
     color: white;

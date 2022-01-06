@@ -4,21 +4,27 @@ import { defineComponent, nextTick } from 'vue'
 import { IProfile, IHazardInfo, IHazardProfile } from "./types";
 import HazardCard from './components/HazardCard.vue'
 
-import { mapState,  } from 'vuex'
+import { mapState, } from 'vuex'
 
 // @ts-ignore
 import Plotly from 'plotly.js-dist'
 
+
+// @ts-ignore
+import Markdown from 'vue3-markdown-it';
+
 export default defineComponent({
     components: {
-        HazardCard,
+        HazardCard, Markdown,
     },
 
     data() {
         return {
             profile: null as null|IProfile,
-            //hazardId: null as null|string, //selected hazard to show detail on
-        }  
+
+            //hazard details in markdown content
+            details: {} as {[key: string]: string},
+        }
     },
 
     computed: {
@@ -27,15 +33,16 @@ export default defineComponent({
 
     async mounted() {
         //console.log("Profile mounted", this.$route.params.locationId);
-        
+
         //load profile information for specified location
         //const location_source = "profile.json?zip=47403&age=43&gender=male";
         const location_source = this.config.apiHost+"/profile/"+this.$route.params.locationId+"?age=43&gender=male";
         const res = await fetch(location_source);
         const json = await res.json();
-        console.log("loaded disaster profile for", this.$route.params.locationId);
-        console.dir(json); 
         this.profile = json; 
+        this.profile?.hazards.forEach(hazard=>{
+            hazard.detailLoaded = false;
+        });
 
         nextTick(()=>{
             //wait for v-if/profile to be applied so we can attach to $refs.stormPlot
@@ -128,20 +135,32 @@ export default defineComponent({
         }
         */
        
+        /*
         select(hazardId : string) {
             const p = this.$route.params;
             this.$router.push(`/profile/${p.locationId}/${p.age}/${p.gender}/${hazardId}`);
         },
+        */
 
-        getHazard(id : string) : IHazardInfo|undefined {
-            /*
-            console.log("looking for ", id);
-            (this.hazards as IHazardInfo[]).forEach(h=>{
-                console.log(h);
-            });
-            */
-            return this.hazards.find((h:IHazardInfo)=>h.id == id);
+        async loadDetail(hazard: IHazardProfile) {
+            const info = this.hazards[hazard.hazardId];
+            const url = this.config.mdHost+"/hazards/"+hazard.hazardId+".md";
+            const res = await fetch(url);
+            if(res.status == 200) {
+                hazard.detailLoaded = true;
+                this.details[hazard.hazardId] = await res.text();
+            } else {
+                console.dir(res);
+                this.details[hazard.hazardId] = "No Info. Please create "+url;
+            }
         },
+
+        /*
+        getHazard(id : string) : IHazardInfo|undefined {
+            //return this.hazards.find((h:IHazardInfo)=>h.id == id);
+            return this.hazards[id];
+        },
+        */
 
         sortHazard(a : IHazardProfile , b: IHazardProfile) : number {
             if(a.prob < b.prob) return 1;
@@ -176,46 +195,64 @@ export default defineComponent({
     <div v-if="profile">
         <br>
         <br>
-        <center>
-            <h2>Disaster Profile for</h2>
+        <div class="center">
+            <h2>Disaster Risks for</h2>
             <h1 style="font-weight: normal;">
-                <b>{{$route.params.age}}/{{$route.params.gender}}</b> 
-                living in 
+                <b>{{$route.params.age}}/{{$route.params.gender}}</b>
+                living in
                 <b>{{profile.city}}, {{profile.state}} {{profile.zip}}</b>
             </h1>
             <p>You have higher risk of experiencing the following disasters. Click a disaster to learn more.</p>
-        </center>
+        </div>
         <br>
+
+        <!--
+        <p>
+            <h3 style="float: right;">Risks</h3>
+            <br clear="both">
+        </p>
+        -->
+
         <div class="hazards">
-            <p style="float: right; width: 100%; font-size: 120%; padding-right: 20px; margin-bottom: 10px; opacity: 0.5;">Risks</p>
-            <HazardCard v-for="hazard in profile.hazards.filter(h=>h.prob > 0.2).sort(sortHazard)" :key="hazard.hazardId"
-                :hazardProfile="hazard" class="card" @click="select(hazard.hazardId)"/>
+            <div class="hazard" v-for="hazard in profile.hazards.filter(h=>h.prob > 0.2).sort(sortHazard)" :key="hazard.hazardId">
+                <HazardCard :hazardProfile="hazard" class="hazard" @click="loadDetail(hazard)"/>
+                <transition name="slide">
+                    <Markdown v-if="details[hazard.hazardId]" :source="details[hazard.hazardId]"/>
+                </transition>
+            </div>
         </div>
 
-        <center>
+        <div class="center">
             <h2>Other Potential Disasters</h2>
             <p>Although less likely, you could also experience the following disasters.</p>
-        </center>
-        <br>
-        <div class="hazards">
-            <HazardCard v-for="hazard in profile.hazards.filter(h=>h.prob <= 0.2).sort(sortHazard)" :key="hazard.hazardId"
-                :hazardProfile="hazard" class="card" @click="select(hazard.hazardId)"/>
         </div>
+        <br>
+
+        <div class="hazards">
+            <div class="hazard" v-for="hazard in profile.hazards.filter(h=>h.prob <= 0.2).sort(sortHazard)" :key="hazard.hazardId">
+                <HazardCard :hazardProfile="hazard" @click="loadDetail(hazard)"/>
+                <transition name="slide">
+                    <div v-if="details[hazard.hazardId]">{{details[hazard.hazardId]}}</div>
+                </transition>
+            </div>
+        </div>
+
         <!--
         <div class="minor-hazards">
             <div v-for="hazard in profile.hazards.filter(h=>h.prob <= 0.2).sort(sortHazard)" :key="hazard.hazardId" 
-                class="hazard" 
+                class="hazard"
                 :title="getHazard(hazard.hazardId).name">
-                <img :src="getHazard(hazard.hazardId).logo" 
-                    @click="hazardId = hazard.hazardId" 
+                <img :src="getHazard(hazard.hazardId).logo"
+                    @click="hazardId = hazard.hazardId"
                     style="width: 40px; height: 40px;"/>
             </div>
         </div>
         -->
-        <center>
+
+        <div class="center">
             <h2>Storm History</h2>
             <p>This graph shows the number of storm events that you county has experienced in the past.</p>
-        </center>
+        </div>
         <div ref="stormPlot"/>
 
         <br>
@@ -260,11 +297,7 @@ export default defineComponent({
 }
 
 .hazards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .card {
+    .hazard {
         margin-bottom: 20px;
     }
 
@@ -273,7 +306,7 @@ export default defineComponent({
         margin-bottom: 20px;
         cursor: pointer;
     }
-    
+
     @media screen and (min-width: 10em) {
         .card {
             max-width: 300px;
@@ -293,7 +326,7 @@ export default defineComponent({
             max-width: calc(33% -  1em);
         }
     }
-    
+
     @media screen and (min-width: 60em) {
         .card {
             max-width: calc(25% - 1em);
@@ -312,7 +345,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .hazard {
         padding-left: 20px;
         cursor: pointer;

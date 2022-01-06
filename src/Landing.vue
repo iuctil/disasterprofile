@@ -11,7 +11,7 @@ export default defineComponent({
 
     data() {
         return {
-            errors: [],
+            errors: [] as string[],
 
             locationId: "",
             age: 43,

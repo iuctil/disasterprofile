@@ -9,15 +9,21 @@ import Contact from './Contact.vue'
 
 import Landing from './Landing.vue'
 import Profile from './Profile.vue'
-import Detail from './Detail.vue'
+//import Detail from './Detail.vue'
 import VueGtag from 'vue-gtag-next'
 
+//import SlideUpDown from 'vue3-slide-up-down'
+
 import store from './store'
+
+// @ts-ignore
+//import Markdown from 'vue3-markdown-it'; 
+import 'highlight.js/styles/monokai.css';
 
 const routes = [
     { path: '/', component: Landing },
     { path: '/profile/:locationId/:age/:gender', component: Profile },
-    { path: '/profile/:locationId/:age/:gender/:hazardId', component: Detail },
+    //{ path: '/profile/:locationId/:age/:gender/:hazardId', component: Detail },
     { path: '/about', component: About },
     { path: '/methods', component: Method },
     { path: '/contact', component: Contact },
@@ -38,5 +44,8 @@ app.use(VueGtag, {
     }
 });
 //app.use(ElementPlus)
+
+//app.component('slide-up-down', SlideUpDown)
+//app.use(Markdown); //doesn't work..
 
 app.mount('#app')

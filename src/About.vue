@@ -17,7 +17,7 @@ export default defineComponent({
 <template>
 <div class="content">
     <h1>About</h1>
-    <p>TODO...</p>
+    <p>Please edit me...</p>
 </div>
 </template>
 

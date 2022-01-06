@@ -33,6 +33,8 @@ export default defineComponent({
   <div class="content">
     <div class="title" @click="clicktitle">
       <img alt="logo" src="../assets/logo.png" class="logo"/>
+      <h2>CTIL</h2>
+      &nbsp;
       <h1>{{config.siteName}}</h1>
     </div>
     <!--<ProfileSelecter v-if="$route.path != '/'" style="background-color: #0003;"/>-->
@@ -63,6 +65,12 @@ h1 {
   letter-spacing: 0.25px;
   font-size: 25pt;
   color: $primary-color;
+}
+h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 25pt;
+    font-weight: bold;
 }
 img.logo {
   padding: 0 0;

@@ -30,7 +30,8 @@ export default defineComponent({
     computed: {
         ...mapState(['hazards']),
         hazard() : IHazardInfo|undefined {
-            return this.hazards.find((h:IHazardInfo)=>h.id == this.hazardProfile.hazardId);
+            //return this.hazards.find((h:IHazardInfo)=>h.id == this.hazardProfile.hazardId);
+            return this.hazards[this.hazardProfile.hazardId];
         }
     },
     methods: {
@@ -47,20 +48,19 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="hazard-card" v-if="hazard">
-    <!--<div class="prob">{{formatProb(hazardProfile.prob)}}</div>-->
+<div v-if="hazard" class="hazard-card">
     <Prob :prob="hazardProfile.prob"/>
     <div class="header">
         <img :src="hazard.logo" class="logo"/>
-        <h2 class="title">{{hazard.name}}</h2> 
+        <h2 class="title">{{hazard.name}}</h2>
         <p class="desc">{{hazard.shortDesc}}</p>
         <p class="desc" v-if="hazardProfile.source == 'CDC-COD' && hazardProfile.deaths && hazardProfile.totalDeaths">
-            In the year <b>{{hazardProfile.sourceYear}}</b>, there has been 
-            <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i> 
+            In the year <b>{{hazardProfile.sourceYear}}</b>, there has been
+            <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i>
             deaths in your state (total reported death of <b>{{formatNumber(hazardProfile.totalDeaths)}}</b>).
         </p>
         <p class="desc" v-if="hazardProfile.source == 'NOAA-STORM-EVENTS'">
-            In the last <b>{{hazardProfile.totalYears}}</b> years, there has been 
+            In the last <b>{{hazardProfile.totalYears}}</b> years, there has been
             <b>{{hazardProfile.experiencedYears}}</b> years with at least 1 storm events of this type.
         </p>
     </div>
@@ -68,28 +68,16 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-/*
 .hazard-card {
-    height: 350px;
-    background: $secondary-color-dark;
+    flex-shrink: 0;
+    flex-grow: 1;
 
-    display: inline-block;
-    border-radius: 10px;
-    color: white;
-
-    overflow: hidden;
-    box-shadow: 1px 1px 10px #0002;
-
-    position: relative;
-}
-*/
-.hazard-card {
-    width: 100%;
     box-shadow: 2px 2px 8px #0002;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+    box-sizing: border-box;
 
     transition: 0.3s box-shadow;
 
@@ -110,7 +98,7 @@ export default defineComponent({
     }
 
     &:hover {
-    box-shadow: 2px 2px 10px #0003;
+        box-shadow: 2px 2px 10px #0003;
     }
 }
 

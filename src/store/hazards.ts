@@ -1,29 +1,32 @@
-const hazards = [
-  {
+import { IHazardInfo } from "../types";
+
+const hazards = {} as {[key: string] : IHazardInfo};
+
+hazards["avalanche"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "avalanche",
     name: "Avalanche",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/avalanche"
     ],
-    logo: "/images/hazards/avalanche.jpg"
-  },
-  {
+    logo: "/images/hazards/avalanche.jpg",
+    readmeURL: ""
+};
+
+hazards["drought"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "drought",
     name: "Drought",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/drought"
     ],
-    logo: "/images/hazards/drought.jpg"
-  },
+    logo: "/images/hazards/drought.jpg",
+    readmeURL: ""
+};
 
-  {
-    id: "seiche",
+hazards["seiche"] = {
     name: "Seiche",
     shortDesc: "A seiche is a standing wave in an enclosed or partially enclosed body of water. Seiches and seiche-related phenomena have been observed on lakes, reservoirs, swimming pools, bays, harbours and seas.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -31,11 +34,11 @@ const hazards = [
     urls: [
       "https://someurl.com"
     ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: ""
+};
 
-  {
-    id: "duststorm",
+hazards["duststorm"] = {
     name: "Duststorm",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -43,21 +46,23 @@ const hazards = [
     urls: [
       "https://someurl.com/duststorm"
     ],
-    logo: "/images/hazards/duststorm.jpg"
-  },
-  {
+    logo: "/images/hazards/duststorm.jpg",
+    readmeURL: ""
+};
+
+hazards["earthquake"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "earthquake",
     name: "Earthquake",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/earthquake"
     ],
-    logo: "/images/hazards/earthquake.jpg"
-  },
-  {
-    id: "wildfire",
+    logo: "/images/hazards/earthquake.jpg",
+    readmeURL: ""
+};
+
+hazards["wildfire"] = {
     name: "Wildfire",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -65,22 +70,23 @@ const hazards = [
     urls: [
       "https://someurl.com/forestfire"
     ],
-    logo: "/images/hazards/forestfire.jpg"
-  },
-  {
+    logo: "/images/hazards/forestfire.jpg",
+    readmeURL: ""
+};
+
+hazards["hailstorm"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "hailstorm",
     name: "Hailstorm",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/hailstorm"
     ],
-    logo: "/images/hazards/hailstorm.jpg"
-  },
+    logo: "/images/hazards/hailstorm.jpg",
+    readmeURL: ""
+};
 
-  {
-    id: "hurricane",
+hazards["hurricane"] = {
     name: "Hurricane",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -88,11 +94,11 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/images/hazards/hurricane.jpg"
-  },
+    logo: "/images/hazards/hurricane.jpg",
+    readmeURL: ""
+};
 
-  {
-    id: "tropicaldepression",
+hazards["tropicaldepression"] = {
     name: "Tropical Depression",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -100,11 +106,11 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/images/hazards/hurricane.jpg"
-  },
+    logo: "/images/hazards/hurricane.jpg",
+    readmeURL: ""
+};
 
-  {
-    id: "tropicalstorm",
+hazards["tropicalstorm"] = {
     name: "Tropical Storm",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -112,341 +118,345 @@ const hazards = [
     urls: [
       "https://someurl.com/hurricane"
     ],
-    logo: "/images/hazards/hurricane.jpg"
-  },
+    logo: "/images/hazards/hurricane.jpg",
+    readmeURL: ""
+};
 
-  {
+hazards["sandstorm"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "sandstorm",
     name: "Sandstorm",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/sandstorm"
     ],
-    logo: "/images/hazards/sandstorm.jpg"
-  },
-  {
+    logo: "/images/hazards/sandstorm.jpg",
+    readmeURL: ""
+};
+
+hazards["sinkhole"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "sinkhole",
     name: "Sinkhole",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/sinkhole"
     ],
-    logo: "/images/hazards/sinkhole.jpg"
-  },
-  {
+    logo: "/images/hazards/sinkhole.jpg",
+    readmeURL: ""
+};
+
+hazards["thunderstorm"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "thunderstorm",
     name: "Thunderstorm/Wind",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/thunderstorm"
     ],
-    logo: "/images/hazards/thunderstorm.jpg"
-  },
+    logo: "/images/hazards/thunderstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
+hazards["tornado"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "tornado",
     name: "Tornado",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/tornado"
     ],
-    logo: "/images/hazards/tornado.jpg"
-  },
+    logo: "/images/hazards/tornado.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "funnelcloud",
+hazards["funnelcloud"] = {
     name: "Funnel Cloud",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "life/health", "property" ],
     urls: [ "https://someurl.com/tornado" ],
-    logo: "/images/hazards/tornado.jpg"
-  },
+    logo: "/images/hazards/tornado.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
+hazards["tsunami"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "tsunami",
     name: "Tsunami",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/tsunami"
     ],
-    logo: "/images/hazards/tsunami.jpg"
-  },
-  {
+    logo: "/images/hazards/tsunami.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["volcano"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "volcano",
     name: "Volcano",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/volcano"
     ],
-    logo: "/images/hazards/volcano.jpg"
-  },
-  {
+    logo: "/images/hazards/volcano.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["highwind"] = {
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "highwind",
     name: "High Wind",
     assets: [ "life/health", "property" ],
     urls: [
       "https://someurl.com/windstorm"
     ],
-    logo: "/images/hazards/windstorm.jpg"
-  },
+    logo: "/images/hazards/windstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "frostfreeze",
+hazards["frostfreeze"] = {
     name: "Frost/Freeze",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/icestorm.jpg"
-  },
+    logo: "/images/hazards/icestorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "Extreme Cold/Wind Chill",
-    name: "extremecold",
+hazards["extremecold"] = {
+    name: "Extreme Cold/Wind Chill",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/icestorm.jpg"
-  },
+    logo: "/images/hazards/icestorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "winterstorm",
+hazards["winterstorm"] = {
     name: "Winter Storm",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/snowstorm.jpg"
-  },
+    logo: "/images/hazards/snowstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "winterweather",
+hazards["winterweather"] = {
     name: "Winter Weather",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/snowstorm.jpg"
-  },
+    logo: "/images/hazards/snowstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "heat",
+hazards["heat"] = {
     name: "Heat",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "dustdevil",
+hazards["dustdevil"] = {
     name: "Dust Devil",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "duststorm",
+hazards["duststorm"] = {
     name: "Dust Storm",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "avalanche",
+hazards["avalanche"] = {
     name: "Avalanche",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "sleet",
+hazards["sleet"] = {
     name: "Sleet",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "landslide",
+hazards["landslide"] = {
     name: "Landslide",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "densefog",
+hazards["densefog"] = {
     name: "Dense Fog",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "highsurf",
+hazards["highsurf"] = {
     name: "High Surf",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "debrisflow",
+hazards["debrisflow"] = {
     name: "Debris Flow",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "freezingfog",
+hazards["freezingfog"] = {
     name: "Freezing Fog",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "heavysnow",
+hazards["heavysnow"] = {
     name: "Heavy Storm",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/snowstorm.jpg"
-  },
+    logo: "/images/hazards/snowstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "lakeeffectsnow",
+hazards["lakeeffectsnow"] = {
     name: "Lake-Effect Snow",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/snowstorm.jpg"
-  },
+    logo: "/images/hazards/snowstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+}
 
-  {
-    id: "blizzard",
+hazards["blizzard"] = {
     name: "Blizzard",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/snowstorm.jpg"
-  },
+    logo: "/images/hazards/snowstorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "heavyrain",
+hazards["heavyrain"] = {
     name: "Heavy Rain",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "lightning",
+hazards["lightning"] = {
     name: "Lightning",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/unknown.jpg"
-  },
+    logo: "/images/hazards/unknown.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "flashflood",
+hazards["flashflood"] = {
     name: "Flash Flood",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/flood.jpg"
-  },
+    logo: "/images/hazards/flood.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "stormsurge",
+hazards["stormsurge"] = {
     name: "Storm Surge",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/stormsurge.jpg"
-  },
+    logo: "/images/hazards/stormsurge.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
-  {
-    id: "ripcurrent",
+hazards["ripcurrent"] = {
     name: "Rip Current",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/stormsurge.jpg"
-  },
+    logo: "/images/hazards/stormsurge.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+},
 
-  {
-    id: "coastalflood",
+hazards["coastalflood"] = {
     name: "Coastal Flood",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/flood.jpg"
-  },
+    logo: "/images/hazards/flood.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+},
 
-  {
-    id: "lakeshoreflood",
+hazards["lakeshoreflood"] = {
     name: "Lakeshore Flood",
     shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     assets: [ "todo" ],
     urls: [ "https://someurl.com/" ],
-    logo: "/images/hazards/flood.jpg"
-  },
+    logo: "/images/hazards/flood.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+},
 
-  {
-    id: "flood",
+hazards["flood"] = {
     shortDesc: "Believe it or not, flooding is the deadliest type of severe weather. There’s probably a lot about floods and flooding you don’t know.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     name: "Flooding",
@@ -457,7 +467,9 @@ const hazards = [
       "https://www.valuepenguin.com/homeowners-insurance/how-to-prevent-home-flooding"
     ],
     logo: "/images/hazards/flood.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
 
+    /*
     probMitigations: [
       {
         question: "Is your property within or near the flood zone?",
@@ -557,40 +569,44 @@ const hazards = [
         ]
       }
     ]
-  },
-  {
+    */
+};
+
+hazards["icestorm"] = {
     shortDesc: "The U.S. National Weather Service defines an ice storm as a storm which results in the accumulation of at least 0.25-inch (6.4 mm) of ice on exposed surfaces.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "icestorm",
     name: "Ice Storm",
     assets: [ "life/health", "property" ],
     urls: [
       "https://en.wikipedia.org/wiki/Ice_storm/"
     ],
-    logo: "/images/hazards/icestorm.jpg"
-  },
-  {
+    logo: "/images/hazards/icestorm.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["cancer"] = {
     shortDesc: "No. 2 killer of Americans in 2020, accounting for about 18% of overall deaths",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "cancer",
     name: "Cancer",
     assets: [ "life/health" ],
-    urls: "https://somewhere.com/cancer/",
-    logo: "/images/hazards/cancer.jpg"
-  },
-  {
+    urls: ["https://somewhere.com/cancer/"],
+    logo: "/images/hazards/cancer.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+}
+
+hazards["heart-disease"] = {
     shortDesc: "Heart disease remained the top killer in the U.S. in 2020, accounting for about 21% of deaths and for 31,841 more deaths than in 2019. The nearly 5% increase in heart disease deaths in 2020 was the largest such increase since 2012, researchers said.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    id: "heart-disease",
     name: "Heart Disease",
     assets: [ "life/health" ],
     urls: [
       "https://somewhere.com/heartdisease/"
     ],
-    logo: "/images/hazards/heartdisease.jpg"
-  },
-  {
-    id: "economic-collapse",
+    logo: "/images/hazards/heartdisease.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+}
+
+hazards["economic-collapse"] = {
     shortDesc: "Economic collapse is any of a broad range of bad economic conditions, ranging from a severe, prolonged depression with high bankruptcy rates and high unemployment (such as the Great Depression of the 1930s)",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     name: "Economic Collapse",
@@ -598,63 +614,68 @@ const hazards = [
     urls: [
       "https://en.wikipedia.org/wiki/Economic_collapse"
     ],
-    logo: "/images/hazards/economiccollapse.jpg"
-  },
-  {
-    id: "house-fire",
+    logo: "/images/hazards/economiccollapse.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["house-fire"] = {
     name: "House Fire",
     shortDesc: "",
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/images/hazards/housefire.jpg"
-  },
-  {
-    id: "id-theft",
+    logo: "/images/hazards/housefire.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["id-theft"] = {
     name: "Identity Theft",
     shortDesc: "",
     desc: "",
     assets: [ "information" ],
     urls: [ ],
-    logo: "/images/hazards/idtheft.jpg"
-  },
-  {
-    id: "car-accident",
+    logo: "/images/hazards/idtheft.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["car-accident"] = {
     name: "Car Accident",
     shortDesc: "",
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/images/hazards/caraccident.jpg"
-  },
-  {
-    id: "power-failure",
+    logo: "/images/hazards/caraccident.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["power-failure"] = {
     name: "Power Failure",
     shortDesc: "",
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/images/hazards/powerfailure.jpg"
-  },
-  {
-    id: "cyber-attack",
+    logo: "/images/hazards/powerfailure.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["cyber-attack"] = {
     name: "Cyber Attack",
     shortDesc: "Service outages and randomware that can criple effensial operations.",
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/images/hazards/cyberattack.jpg"
-  },
-  {
-    id: "riots",
+    logo: "/images/hazards/cyberattack.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
+
+hazards["riots"] = {
     name: "Riots",
     shortDesc: "",
     desc: "",
     assets: [ "life/health", "property" ],
     urls: [ ],
-    logo: "/images/hazards/riots.jpg"
-  },
-
-];
+    logo: "/images/hazards/riots.jpg",
+    readmeURL: "//raw.githubusercontent.com/iuctil/dsla/master/content/docs/KnowledgeObjects/AWS_EC2.md"
+};
 
 export default hazards;

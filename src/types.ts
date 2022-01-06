@@ -15,17 +15,17 @@ export interface IMitigation {
 }
 
 export interface IHazardInfo {
-    id: string,
+    //id: string,
     shortDesc: string, //to show on card
     desc: string,
-    //impact: string,
     name: string,
     assets: string[],
     urls: string[],
     logo: string,
+    readmeURL: string,
 
-    probMitigations: IMitigation[],
-    impactMitigations: IMitigation[],
+    //probMitigations: IMitigation[],
+    //impactMitigations: IMitigation[],
 }
 
 export interface IHazardProfile {
@@ -41,6 +41,8 @@ export interface IHazardProfile {
     //source: NOAA-STORM-EVENTS
     experiencedYears?: number,
     totalYears?: number,
+
+    detailLoaded: boolean,
 }
 export interface IProfile {
     locationId: string

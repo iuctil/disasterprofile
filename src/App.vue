@@ -136,4 +136,13 @@ span.tag {
     margin-bottom: 10px;
 }
 
+.slide-enter-to, .slide-leave-from {
+    transition: opacity .5s ease;
+    opacity: 1;
+}
+
+.slide-enter-from, .slide-leave-to {
+    opacity: 0;
+}
+
 </style>
