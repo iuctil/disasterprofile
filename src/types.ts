@@ -16,13 +16,13 @@ export interface IMitigation {
 
 export interface IHazardInfo {
     //id: string,
-    shortDesc: string, //to show on card
+    //shortDesc: string, //to show on card
     desc: string,
     name: string,
-    assets: string[],
-    urls: string[],
+    //assets: string[],
+    //urls: string[],
     logo: string,
-    readmeURL: string,
+    //readmeURL: string,
 
     //probMitigations: IMitigation[],
     //impactMitigations: IMitigation[],

@@ -53,7 +53,7 @@ export default defineComponent({
     <div class="header">
         <img :src="hazard.logo" class="logo"/>
         <h2 class="title">{{hazard.name}}</h2>
-        <p class="desc">{{hazard.shortDesc}}</p>
+        <p class="desc">{{hazard.desc}}</p>
         <p class="desc" v-if="hazardProfile.source == 'CDC-COD' && hazardProfile.deaths && hazardProfile.totalDeaths">
             In the year <b>{{hazardProfile.sourceYear}}</b>, there has been
             <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i>
