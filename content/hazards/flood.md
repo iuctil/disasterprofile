@@ -41,6 +41,9 @@ https://www.safewise.com/home-security-faq/house-flood/
 Learn how to be ready for flooding
 https://www.ready.gov/floods
 
+https://www.ready.gov/severe-weather
+
+
 ## Datasources
 
 NOAA Storm History
