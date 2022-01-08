@@ -110,6 +110,12 @@ hazards["volcano"] = {
     logo: "/images/hazards/volcano.jpg",
 };
 
+hazards["ashfall"] = {
+    desc: "TODO.",
+    name: "Volcanic Ashfall",
+    logo: "/images/hazards/volcano.jpg",
+};
+
 hazards["highwind"] = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     name: "High Wind",
@@ -126,18 +132,6 @@ hazards["extremecold"] = {
     name: "Extreme Cold/Wind Chill",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     logo: "/images/hazards/icestorm.jpg",
-};
-
-hazards["winterstorm"] = {
-    name: "Winter Storm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    logo: "/images/hazards/snowstorm.jpg",
-};
-
-hazards["winterweather"] = {
-    name: "Winter Weather",
-    desc: "Winter storms create a higher risk of car accidents, hypothermia, frostbite, carbon monoxide poisoning, and heart attacks from overexertion. Winter storms including blizzards can bring extreme cold, freezing rain, snow, ice and high winds.",
-    logo: "/images/hazards/snowstorm.jpg",
 };
 
 hazards["heat"] = {
@@ -218,6 +212,24 @@ hazards["blizzard"] = {
     logo: "/images/hazards/snowstorm.jpg",
 };
 
+hazards["winterstorm"] = {
+    name: "Winter Storm",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    logo: "/images/hazards/snowstorm.jpg",
+};
+
+hazards["snowstorm"] = {
+    name: "Snow Storm",
+    desc: "Winter storms create a higher risk of car accidents, hypothermia, frostbite, carbon monoxide poisoning, and heart attacks from overexertion. Winter storms including blizzards can bring extreme cold, freezing rain, snow, ice and high winds.",
+    logo: "/images/hazards/snowstorm.jpg",
+};
+
+hazards["winterweather"] = {
+    name: "Winter Weather",
+    desc: "Winter storms create a higher risk of car accidents, hypothermia, frostbite, carbon monoxide poisoning, and heart attacks from overexertion. Winter storms including blizzards can bring extreme cold, freezing rain, snow, ice and high winds.",
+    logo: "/images/hazards/snowstorm.jpg",
+};
+
 hazards["heavyrain"] = {
     name: "Heavy Rain",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -270,18 +282,6 @@ hazards["icestorm"] = {
     desc: "The U.S. National Weather Service defines an ice storm as a storm which results in the accumulation of at least 0.25-inch (6.4 mm) of ice on exposed surfaces.",
     name: "Ice Storm",
     logo: "/images/hazards/icestorm.jpg",
-};
-
-hazards["cancer"] = {
-    desc: "No. 2 killer of Americans in 2020, accounting for about 18% of overall deaths",
-    name: "Cancer",
-    logo: "/images/hazards/cancer.jpg",
-};
-
-hazards["heart-disease"] = {
-    desc: "Heart disease remained the top killer in the U.S. in 2020, accounting for about 21% of deaths and for 31,841 more deaths than in 2019. The nearly 5% increase in heart disease deaths in 2020 was the largest such increase since 2012, researchers said.",
-    name: "Heart Disease",
-    logo: "/images/hazards/heartdisease.jpg",
 };
 
 hazards["economic-collapse"] = {
@@ -337,5 +337,80 @@ hazards["nuclear"] = {
     desc: "Nuclear explosions can cause significant damage and casualties from blast, heat, and radiation but you can keep your family safe by knowing what to do and being prepared if it occurs.",
     logo: "/images/hazards/riots.jpg",
 };
+
+hazards["sneakerwave"] = {
+    desc: "TODO..",
+    name: "sneakerwave",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["smoke"] = {
+    desc: "TODO..",
+    name: "smoke",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+
+
+//CDC
+hazards["heart-disease"] = {
+    desc: "Heart disease remained the top killer in the U.S. in 2020, accounting for about 21% of deaths and for 31,841 more deaths than in 2019. The nearly 5% increase in heart disease deaths in 2020 was the largest such increase since 2012, researchers said.",
+    name: "Heart Disease",
+    logo: "/images/hazards/heartdisease.jpg",
+};
+
+hazards["cancer"] = {
+    desc: "#2 killer of Americans in 2020, accounting for about 18% of overall deaths",
+    name: "Cancer",
+    logo: "/images/hazards/cancer.jpg",
+};
+
+hazards["injuries"] = {
+    name: "Unintentional Injuries",
+    desc: "Unintentional injuries is the 3rd most leading cause of death in the US.",
+    logo: "/images/hazards/unknown.jpg",
+};
+hazards["clrd"] = {
+    desc: "CLRD is the 4th leading cause of death in the US.",
+    name: "CLRD",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["stroke"] = {
+    desc: "Stroke is the 5th leading cause of death in the US.",
+    name: "Stroke",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["alzheimer"] = {
+    desc: "alzheimer's disease is the 6th leading cause of death in the US.",
+    name: "Alzheimer's Disease",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["diabetes"] = {
+    desc: "diabetes is the 7th leading cause of death in the US.",
+    name: "diabetes",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["influenza"] = {
+    desc: "influenza is the 8th leading cause of death in the US.",
+    name: "influenza",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["kidney-disease"] = {
+    desc: "kidney-disease is the 9th leading cause of death in the US.",
+    name: "kidney-disease",
+    logo: "/images/hazards/unknown.jpg",
+};
+
+hazards["suicide"] = {
+    desc: "Suicide is the 10th leading cause of death in the US.",
+    name: "Suicide",
+    logo: "/images/hazards/unknown.jpg",
+};
+
 
 export default hazards;
