@@ -2,7 +2,6 @@ export interface ISummary {
     location: [number, number]
 }
 
-
 export interface IMitigationAnswers {
     v: null|string,
     vunl: number,

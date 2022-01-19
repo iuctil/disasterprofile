@@ -1,8 +1,9 @@
 <script lang="ts">
 
 import { defineComponent, nextTick } from 'vue'
-import { IProfile, IHazardInfo, IHazardProfile } from "./types";
+import { IProfile, IHazardInfo, IHazardProfile } from "./types"
 import HazardCard from './components/HazardCard.vue'
+import HospitalUtilization from './components/HospitalUtilization.vue'
 
 import { mapState, } from 'vuex'
 
@@ -14,7 +15,7 @@ import Markdown from 'vue3-markdown-it';
 
 export default defineComponent({
     components: {
-        HazardCard, Markdown,
+        HazardCard, Markdown, HospitalUtilization,
     },
 
     data() {
@@ -156,6 +157,22 @@ export default defineComponent({
 
         <br>
         <br>
+
+        <div v-if="profile.hospitals && Object.keys(profile.hospitals).length">
+            <div class="center">
+                <h2>Hospital Utilizations</h2>
+                <p>Here are the hospital in your county and their current hospital utilizations. If your hospital is over utilized, it might affect the ability to provide necessary medical cares.</p>
+            </div>
+            <!--
+            <div ref="hospitalPlot"/>
+            -->
+            <div class="hospitals">
+                <HospitalUtilization class="hospital" v-for="(data, key) in profile.hospitals" :key="key" :hospital="data"/>
+            </div>
+        </div>
+
+        <br>
+        <br>
         <br>
 
         <h3>Debug</h3>
@@ -220,6 +237,12 @@ h2 {
     margin: 50px 0;
     border-left: 5px solid #0002;
     padding-left: 30px;
+}
+
+.hospitals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 </style>
