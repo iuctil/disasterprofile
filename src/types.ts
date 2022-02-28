@@ -43,6 +43,23 @@ export interface IHazardProfile {
 
     detailLoaded: boolean,
 }
+
+export interface IHospitalData {
+    name: string;
+    address: string;
+    city: string;
+    state: string;
+    zip: number;
+    data: [{
+        collection_week: string;
+        inpatient_beds_7_day_avg: number;
+        inpatient_beds_used_7_day_avg: number;
+
+        total_icu_beds_7_day_avg: number;
+        icu_beds_used_7_day_avg: number;
+    }];
+}
+
 export interface IProfile {
     locationId: string
     lonlat: [number, number]
@@ -52,9 +69,19 @@ export interface IProfile {
         [key: string]: number, //year / count
     }}
 
-    city: string
-    state: string
     zip: string
+
+    counties: [{
+        fips: string
+        county: string //"Greene County"
+        state: string //"Indiana"
+        state2: string //"IN"
+        city: string 
+    }],
+
+    hospitals: {
+        [key: string]: IHospitalData
+    }
 }
 
 export interface IDemoInfo {

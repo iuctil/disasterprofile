@@ -28,7 +28,7 @@ hazards["seiche"] = {
 
 hazards["duststorm"] = {
     name: "Duststorm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    desc: "A dust storm, also called a sandstorm, is a meteorological phenomenon common in arid and semi-arid regions.",
     logo: "/images/hazards/duststorm.jpg",
 };
 
@@ -41,11 +41,11 @@ hazards["earthquake"] = {
 hazards["wildfire"] = {
     name: "Wildfire",
     desc: "Wildfires are unplanned fires that burn in natural areas like forests, grasslands or prairies. These dangerous fires spread quickly and can devastate not only wildfire and natural areas, but also communities.",
-    logo: "/images/hazards/forestfire.jpg",
+    logo: "/images/hazards/wildfire.jpg",
 };
 
 hazards["hailstorm"] = {
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Hail damage is a significant risk to property across the US. Every year, thousands of Americans experience damage to their cars, roofs, windows, and gutters as a result of hail storms.",
     name: "Hailstorm",
     logo: "/images/hazards/hailstorm.jpg",
 };
@@ -58,24 +58,24 @@ hazards["hurricane"] = {
 
 hazards["tropicaldepression"] = {
     name: "Tropical Depression",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    desc: "A tropical depression is a tropical cyclone that has maximum sustained surface winds (one-minute average) of 38 mph (33 knots) or less.",
     logo: "/images/hazards/hurricane.jpg",
 };
 
 hazards["tropicalstorm"] = {
     name: "Tropical Storm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A tropical storm is a tropical cyclone that has maximum sustained surface winds ranging from 39-73 mph (34 to 63 knots).",
     logo: "/images/hazards/hurricane.jpg",
 };
 
 hazards["sandstorm"] = {
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    desc: "A sandstorm refers to a high amount of wind occurring in sandy areas, usually in deserts, where the wind speed is able to lift the top layer of sand from the ground, and push it in every imaginable direction.",
     name: "Sandstorm",
     logo: "/images/hazards/sandstorm.jpg",
 };
 
 hazards["sinkhole"] = {
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A sinkhole is a depression in the ground that has no natural external surface drainage. Basically, this means that when it rains, all of the water stays inside the sinkhole and typically drains into the subsurface. [USGS]",
     name: "Sinkhole",
     logo: "/images/hazards/sinkhole.jpg",
 };
@@ -94,7 +94,7 @@ hazards["tornado"] = {
 
 hazards["funnelcloud"] = {
     name: "Funnel Cloud",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A funnel cloud is a funnel-shaped cloud of condensed water droplets, associated with a rotating column of wind and extending from the base of a cloud (usually a cumulonimbus or towering cumulus cloud) but not reaching the ground or a water surface. [wikipedia]",
     logo: "/images/hazards/tornado.jpg",
 };
 
@@ -111,56 +111,56 @@ hazards["volcano"] = {
 };
 
 hazards["ashfall"] = {
-    desc: "TODO.",
     name: "Volcanic Ashfall",
+    desc: "Ashfall is the most widespread and frequent volcanic hazard. Ashfall rarely endangers human lives, but it can have devastating effects on the things that we rely upon from day to day. [USGS]",
     logo: "/images/hazards/volcano.jpg",
 };
 
 hazards["highwind"] = {
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     name: "High Wind",
+    desc: "'High wind' with sustained speeds of 40 to 57 mph.",
     logo: "/images/hazards/windstorm.jpg",
 };
 
 hazards["frostfreeze"] = {
     name: "Frost/Freeze",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A frost event is the formation of thin ice crystals on the ground. Killing frost refers to a severe frost that will end the growing season, and would be associated with below freezing temperatures. Freeze refers to a situation where the temperature will fall to freezing or below. [weather.gov]",
     logo: "/images/hazards/icestorm.jpg",
 };
 
 hazards["extremecold"] = {
     name: "Extreme Cold/Wind Chill",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Wind chill is a great predictor of such dangers as frostbite and hypothermia. Being exposed to below zero wind chills can induce frostbite within five minutes. While wind chills below minus 20 degrees can result in frostbite within a minute of exposure. [actionnews5.com]",
     logo: "/images/hazards/icestorm.jpg",
 };
 
 hazards["heat"] = {
     name: "Heat",
     desc: "There is hot, and then there is hot! Extreme heat is a period of high heat and humidity with temperatures above 90 degrees for at least two to three days. In extreme heat your body works extra hard to maintain a normal temperature, which can lead to death. Extreme heat is responsible for the highest number of annual deaths among all weather-related hazards.",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/heat.jpg",
 };
 
 hazards["dustdevil"] = {
     name: "Dust Devil",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A dust devil is a strong, well-formed, and relatively short-lived whirlwind, ranging from small (half a metre wide and a few metres tall) to large (more than 10 m wide and more than 1 km tall). [wikipedia]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["duststorm"] = {
     name: "Dust Storm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A dust storm, also called a sandstorm, is a meteorological phenomenon common in arid and semi-arid regions. Dust storms arise when a gust front or other strong wind blows loose sand and dirt from a dry surface. Fine particles are transported by saltation and suspension, a process that moves soil from one place and deposits it in another. [wikipedia]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["avalanche"] = {
     name: "Avalanche",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "An avalanche (also called a snow slide) is a rapid flow of snow down a slope, such as a hill or mountain. [wikipedia]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["sleet"] = {
     name: "Sleet",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Sleet is simply frozen raindrops and occurs when the layer of freezing air along the surface is thicker. This causes the raindrops to freeze before reaching the ground. [weather.gov]",
     logo: "/images/hazards/unknown.jpg",
 };
 
@@ -172,49 +172,49 @@ hazards["landslide"] = {
 
 hazards["densefog"] = {
     name: "Dense Fog",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Fog or smoke are considered dense when the visibility is lowered to a quarter of a mile or less. The combination of smoke and fog is a very dangerous situation that can lower visiblity to zero. If dense fog is predicted or observed over a large enough area, the National Weather Service wil issue a Dense Fog Advisory. [weather.gov]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["highsurf"] = {
     name: "High Surf",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "High surf is when large waves break on or near the shore, as a result of a storm offshore or persistent winds blowing onshore. [wacotrib.com]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["debrisflow"] = {
     name: "Debris Flow",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Debris flows are fast-moving landslides that are particularly dangerous to life and property because they move quickly, destroy objects in their paths, and often strike without warning. [USGS]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["freezingfog"] = {
     name: "Freezing Fog",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "When fog forms in temperatures that are below freezing, the tiny water droplets in the air remain as liquid. They become supercooled water droplets remaining liquid even though they are below freezing temperature. This occurs because liquid needs a surface to freeze upon. [metoffice.gov.uk]",
     logo: "/images/hazards/unknown.jpg",
 };
 
 hazards["heavysnow"] = {
     name: "Heavy Storm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A heavy fall of rain, snow, or hail, or a violent outbreak of thunder and lightning, unaccompanied by strong winds. Also called violent storm . Meteorology. a wind of 64–72 miles per hour (29–32 meters per second). [dictionary.com]",
     logo: "/images/hazards/snowstorm.jpg",
 };
 
 hazards["lakeeffectsnow"] = {
     name: "Lake-Effect Snow",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Lake Effect snow occurs when cold air, often originating from Canada, moves across the open waters of the Great Lakes.",
     logo: "/images/hazards/snowstorm.jpg",
 };
 
 hazards["blizzard"] = {
     name: "Blizzard",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A storm with large amounts of snow or blowing snow, winds greater than 35 mph (56 kph), and visibility of less than 1/4 mile (0.4 km) for at least three hours. Some blizzards, called ground blizzards, have no falling snow. [National Weather Service]",
     logo: "/images/hazards/snowstorm.jpg",
 };
 
 hazards["winterstorm"] = {
     name: "Winter Storm",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A winter storm is an event in which wind coincides with varieties of precipitation that only occur at freezing temperatures, such as snow, mixed snow and rain, or freezing rain. [wikipedia]",
     logo: "/images/hazards/snowstorm.jpg",
 };
 
@@ -232,43 +232,43 @@ hazards["winterweather"] = {
 
 hazards["heavyrain"] = {
     name: "Heavy Rain",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    logo: "/images/hazards/unknown.jpg",
+    desc: "Heavy Rain - when the precipitation rate is > 7.6 mm (0.30 in) per hour, or between 10 mm (0.39 in) and 50 mm (2.0 in) per hour.",
+    logo: "/images/hazards/heavyrain.jpg",
 };
 
 hazards["lightning"] = {
     name: "Lightning",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    logo: "/images/hazards/unknown.jpg",
+    desc: "According to National Geographic, annually about 2,000 people are killed worldwide by lightning. [wikipedia]",
+    logo: "/images/hazards/lightning.jpg",
 };
 
 hazards["flashflood"] = {
     name: "Flash Flood",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A flash flood is a rapid flooding of low-lying areas. It may be caused by heavy rain associated with a severe thunderstorm, hurricane, tropical storm, or meltwater from ice or snow flowing over ice sheets or snowfields. ",
     logo: "/images/hazards/flood.jpg",
 };
 
 hazards["stormsurge"] = {
     name: "Storm Surge",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "A storm surge is a coastal flood of rising water commonly associated with low pressure weather systems (such as tropical cyclones and strong extratropical cyclones), which is the main cause of coastal disaster.",
     logo: "/images/hazards/stormsurge.jpg",
 };
 
 hazards["ripcurrent"] = {
     name: "Rip Current",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Rip currents are powerful, channeled currents of water flowing away from shore. They typically extend from the shoreline, through the surf zone, and past the line of breaking waves. Rip currents can occur at any beach with breaking waves.",
     logo: "/images/hazards/stormsurge.jpg",
 };
 
 hazards["coastalflood"] = {
     name: "Coastal Flood",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "Coastal flooding normally occurs when dry and low-lying land is submerged by seawater.",
     logo: "/images/hazards/flood.jpg",
 };
 
 hazards["lakeshoreflood"] = {
     name: "Lakeshore Flood",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    desc: "The inundation of land areas along any of the Great Lakes over and above normal lake levels. This flooding may impact the immediate lakefront, bays, and interfaces between the Great Lakes and connecting waterways, such as rivers.",
     logo: "/images/hazards/flood.jpg",
 };
 
@@ -339,8 +339,8 @@ hazards["nuclear"] = {
 };
 
 hazards["sneakerwave"] = {
-    desc: "TODO..",
     name: "sneakerwave",
+    desc: "A sneaker wave, also known as a sleeper wave, or in Australia as a king wave, is a disproportionately large coastal wave that can sometimes appear in a wave train without warning. [wikipedia]",
     logo: "/images/hazards/unknown.jpg",
 };
 
@@ -368,48 +368,48 @@ hazards["cancer"] = {
 hazards["injuries"] = {
     name: "Unintentional Injuries",
     desc: "Unintentional injuries is the 3rd most leading cause of death in the US.",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/injury.jpg",
 };
 hazards["clrd"] = {
-    desc: "CLRD is the 4th leading cause of death in the US.",
+    desc: "Chronic lower respiratory diseases (CLRD) are the 4th leading cause of death in the US. It includes several chronic conditions of the respiratory tract such as chronic bronchitis, bronchiectasis, chronic obstructive pulmonary disease (COPD), emphysema and asthma.",
     name: "CLRD",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/clrd.jpg",
 };
 
 hazards["stroke"] = {
     desc: "Stroke is the 5th leading cause of death in the US.",
     name: "Stroke",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/stroke.jpg",
 };
 
 hazards["alzheimer"] = {
     desc: "alzheimer's disease is the 6th leading cause of death in the US.",
     name: "Alzheimer's Disease",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/alzheimer.jpg",
 };
 
 hazards["diabetes"] = {
     desc: "diabetes is the 7th leading cause of death in the US.",
     name: "diabetes",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/diabetes.jpg",
 };
 
 hazards["influenza"] = {
     desc: "influenza is the 8th leading cause of death in the US.",
     name: "influenza",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/influenza.jpg",
 };
 
 hazards["kidney-disease"] = {
     desc: "kidney-disease is the 9th leading cause of death in the US.",
     name: "kidney-disease",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/kidney.jpg",
 };
 
 hazards["suicide"] = {
     desc: "Suicide is the 10th leading cause of death in the US.",
     name: "Suicide",
-    logo: "/images/hazards/unknown.jpg",
+    logo: "/images/hazards/suicide.jpg",
 };
 
 

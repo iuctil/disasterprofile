@@ -93,7 +93,7 @@ export default defineComponent({
         }
         .desc {
             margin-left: 120px;
-            font-size: 10pt;
+            font-size: 12pt;
         }
     }
 

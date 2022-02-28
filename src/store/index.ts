@@ -14,7 +14,8 @@ const state = {
     config: {
         siteName: "disasterProfile.org",
         apiHost: "https://api.disasterprofile.org",
-        mdHost: "//raw.githubusercontent.com/iuctil/disasterprofile/master/content",
+        //mdHost: "//raw.githubusercontent.com/iuctil/disasterprofile/master/content",
+        mdHost: "./content",
     },
 }
 //export type IState = typeof state;

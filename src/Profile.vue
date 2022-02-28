@@ -119,9 +119,9 @@ export default defineComponent({
             <h1 style="font-weight: normal;">
                 <b>{{$route.params.age}}/{{$route.params.gender}}</b>
                 living in
-                <b>{{profile.city}}, {{profile.state}} {{profile.zip}}</b>
+                zip code-<b><!--{{profile.city}}, {{profile.state}}-->{{profile.zip}}</b>
             </h1>
-            <p>You have higher risk of experiencing the following disasters. Click a disaster to learn more.</p>
+            <p style="opacity: 0.8">You have higher risk of experiencing the following disasters. Click a disaster to learn more.</p>
         </div>
         <br>
 
@@ -163,12 +163,22 @@ export default defineComponent({
                 <h2>Hospital Utilizations</h2>
                 <p>Here are the hospital in your county and their current hospital utilizations. If your hospital is over utilized, it might affect the ability to provide necessary medical cares.</p>
             </div>
-            <!--
-            <div ref="hospitalPlot"/>
-            -->
             <div class="hospitals">
                 <HospitalUtilization class="hospital" v-for="(data, key) in profile.hospitals" :key="key" :hospital="data"/>
             </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div>
+            <h2>Datasources</h2>
+            Data from the following counties are used to compute disaster profiles for this ZIP Code ({{profile.zip}}).
+            <ul>
+                <li v-for="county in profile.counties" :key="county.fips">
+                    {{county.county}}, {{county.state}} <small>(FIPS Code {{county.fips}})</small>
+                </li>
+            </ul>
         </div>
 
         <br>
