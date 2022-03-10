@@ -119,7 +119,8 @@ export default defineComponent({
             <h1 style="font-weight: normal;">
                 <b>{{$route.params.age}}/{{$route.params.gender}}</b>
                 living in
-                zip code-<b><!--{{profile.city}}, {{profile.state}}-->{{profile.zip}}</b>
+                <small>zip:</small> 
+                <b>{{profile.zip}}</b>
             </h1>
             <p style="opacity: 0.8">You have higher risk of experiencing the following disasters. Click a disaster to learn more.</p>
         </div>

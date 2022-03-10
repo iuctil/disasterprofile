@@ -1,9 +1,6 @@
+Please read [https://www.ready.gov/winter-weather](https://www.ready.gov/winter-weather) for more information.
 
 ## Resources
 
-TODO
-
-## Datasources
-
-NOAA Storm History
+* [https://www.cdc.gov/disasters/winter/beforestorm/preparehome.html](https://www.cdc.gov/disasters/winter/beforestorm/preparehome.html)
 
