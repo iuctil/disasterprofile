@@ -33,7 +33,8 @@ export default defineComponent({
 
     async mounted() {
         //load profile information for specified location
-        const location_source = this.config.apiHost+"/profile/"+this.$route.params.locationId+"?age=43&gender=male";
+        const params = this.$route.params;
+        const location_source = this.config.apiHost+"/profile/"+params.locationId+"?age="+params.age+"&gender="+params.gender;
         const res = await fetch(location_source);
         const json = await res.json();
         this.profile = json; 
@@ -111,6 +112,15 @@ export default defineComponent({
 
 <template>
 <div class="content">
+    <div v-if="!profile">
+        <br>
+        <br>
+        <h2>Loading Profile...</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
     <div v-if="profile">
         <br>
         <br>
@@ -142,7 +152,7 @@ export default defineComponent({
         <br>
 
         <div class="hazards">
-            <div class="hazard" v-for="hazard in profile.hazards.filter(h=>h.prob <= 0.2).sort(sortHazard)" :key="hazard.hazardId">
+            <div class="hazard" v-for="hazard in profile.hazards.filter(h=>(h.prob <= 0.2 && h.prob > 0.0001)).sort(sortHazard)" :key="hazard.hazardId">
                 <HazardCard :hazardProfile="hazard" @click="loadDetail(hazard)"/>
                 <transition name="slide">
                     <Markdown class="detail" v-if="details[hazard.hazardId]" :source="details[hazard.hazardId]"/>

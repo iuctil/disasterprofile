@@ -12,7 +12,7 @@ export default defineComponent({
 
     methods: {
         formatNumber(p: number) {
-            return (p*100).toFixed(1)+"%";
+            return (p*100).toFixed(2)+"%";
         }
     }
 });

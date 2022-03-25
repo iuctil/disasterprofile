@@ -54,10 +54,10 @@ export default defineComponent({
         <img :src="hazard.logo" class="logo"/>
         <h2 class="title">{{hazard.name}}</h2>
         <p class="desc">{{hazard.desc}}</p>
-        <p class="desc" v-if="hazardProfile.source == 'CDC-COD' && hazardProfile.deaths && hazardProfile.totalDeaths">
+        <p class="desc" v-if="hazardProfile.source == 'CDC-COD' && hazardProfile.deaths">
             In the year <b>{{hazardProfile.sourceYear}}</b>, there has been
-            <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i>
-            deaths in your state (total reported death of <b>{{formatNumber(hazardProfile.totalDeaths)}}</b>).
+            <b>{{formatNumber(hazardProfile.deaths)}}</b> <i>{{hazard.name}}</i> deaths that matches age/gender 
+            <small>(Crude Rate of {{hazardProfile.crudeRate}})</small>
         </p>
         <p class="desc" v-if="hazardProfile.source == 'NOAA-STORM-EVENTS'">
             In the last <b>{{hazardProfile.totalYears}}</b> years, there has been
