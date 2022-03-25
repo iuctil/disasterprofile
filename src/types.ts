@@ -34,8 +34,9 @@ export interface IHazardProfile {
 
     //source: CDC-COD
     deaths?: number,
-    totalDeaths?: number,
+    //totalDeaths?: number,
     sourceYear: number,
+    crudeRate?: number,
 
     //source: NOAA-STORM-EVENTS
     experiencedYears?: number,
