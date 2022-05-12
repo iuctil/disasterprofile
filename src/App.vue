@@ -19,11 +19,6 @@ export default defineComponent({
 </script>
 
 <template>
-<!--
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <Landing/> 
-    <Main/> 
--->
     <Header/>
     <router-view/>
     <Footer/>
@@ -79,12 +74,14 @@ input[type='button']:hover {
 
 input[type='button'],
 input[type='text'],
+input[type='email'],
 input[type='number'] {
     border: none;
     margin: 0;
     padding: 10px;
 }
 input[type='text'],
+input[type='email'],
 input[type='number'] {
     border: none;
     background-color: #0003;
@@ -93,12 +90,18 @@ input[type='number'] {
     font-size: 120%;
 }
 input[type='text']::placeholder,
+input[type='email']::placeholder,
 input[type='number']::placeholder {
     color: #fff9;
 }
 input[type='text']:focus-visible,
+input[type='email']:focus-visible,
 input[type='number']:focus-visible {
     outline: none;
+}
+input[type='button'],
+input[type='submit'] {
+    padding: 5px 10px;
 }
 
 .content {

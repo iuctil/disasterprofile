@@ -47,6 +47,7 @@ export default defineComponent({
 .header {
   border-bottom: 1px solid #0001;
   padding: 10px;
+  margin-bottom: 60px;
 }
 .content {
   display: flex;

@@ -62,7 +62,6 @@ export default defineComponent({
         </p>
 
         <p>
-            <!-- <input type="button" value="Start Here" class="startbutton" @click="start"/> -->
             <b>Your Location</b>
             <LocationSelecter v-model="locationId"/>
         </p>
@@ -150,6 +149,7 @@ export default defineComponent({
         border-radius: 5px;
         width: 100%;
     }
+    
 }
 
 
