@@ -33,7 +33,7 @@ export default defineComponent({
   <div class="content">
     <div class="title" @click="clicktitle">
       <img alt="logo" src="../assets/logo.png" class="logo"/>
-      <h2>CTIL</h2>
+      <div class="ctil">Crisis Technologies<br>Innovation Lab</div>
       &nbsp;
       <h1>{{config.siteName}}</h1>
     </div>
@@ -63,7 +63,6 @@ h1 {
   margin: 0;
   padding: 0px 10px;
   padding-right: 30px;
-  letter-spacing: 0.25px;
   font-size: 25pt;
   color: $primary-color;
 }
@@ -75,9 +74,20 @@ h2 {
 }
 img.logo {
   padding: 0 0;
-  height: 50px;
+  height: 40px;
   vertical-align: top;
   margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+.ctil {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  font-size: 10pt;
+  font-style: italic;
+  position: relative;
+  top: 5px;
 }
 
 ::v-deep(.menu a:not(:last-child)) {

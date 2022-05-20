@@ -8,3 +8,7 @@ This website is developed by Indiana University Crisis Technologies Innovation L
 
 If you have any comments/questions, or if you find this website useful, we'd like to hear from you. Please contact at [ctil@iu.edu](mailtil:ctil@iu.edu).
 
+# Privacy
+
+We store user profile queries on our database to analyze user activity. We do not sell/share this information
+with any 3rd party entities.

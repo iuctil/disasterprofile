@@ -196,8 +196,10 @@ export default defineComponent({
         <br>
         <br>
 
+        <!--
         <h3>Debug</h3>
         <pre>{{profile}}</pre>
+        -->
     </div>
 </div>
 </template>
